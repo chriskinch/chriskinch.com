@@ -1,0 +1,97 @@
+/**
+ * @file
+ * Webform block in the footer
+ */
+
+@import "../../base/config";
+
+$zen-column-count:  24;
+#block-webform-client-block-152 {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background: #222;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 352px;
+  box-sizing:border-box;
+
+  .block-title {
+    @include leader(0);
+    position: relative;
+    
+    &:before {
+      @include icon-mail-alt;
+      position: absolute;
+      font-size: 2em;
+      right: 0;
+      top: -0.1em;
+      color: rgba(255,255,255,0.05);
+      -webkit-transform: rotate(19deg);
+      text-shadow: 0 -1px 0 #111;
+      z-index: -1;
+    }
+  }
+
+  @include mq($from: narrow, $until: regular) {
+    @include zen-grid-item(12, 1);
+  }
+
+  @include mq($from: regular) {
+    @include zen-grid-item(8, 1);
+  }
+}
+
+#block-webform-client-block-152 {
+  .form-item {
+    position: relative;
+    z-index: 10;
+
+    input,
+    textarea {
+      width: 100%;
+      box-sizing:border-box;
+      background:lighten($dark, 10%);
+    }
+  }
+
+  textarea {
+    text-indent: 80px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: -1.7em;
+    margin-left: 1em;
+    line-height: 1;
+    font-weight: 300;
+    font-weight:normal;
+    color:$medium;
+    position: relative;
+    pointer-events: none;
+
+    &:after {
+      content:":"
+    }
+
+    .form-required {
+      display:none;
+    }
+  }
+
+  input.form-submit {
+    width:auto;
+    float:right;
+  }
+
+  #edit-submitted-name {    padding-left:5em; }
+  #edit-submitted-email {   padding-left:5em; }
+
+  .mollom-privacy {
+    @include adjust-font-size-to(11px, 0.75);
+    width: 130px;
+    float: left;
+    color:darken($page, 30%);
+  }
+}

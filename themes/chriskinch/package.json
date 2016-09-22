@@ -1,0 +1,28 @@
+{
+  "name": "main",
+  "description": "Main application layer for chriskinch.com",
+  "homepage": "http://chriskinch.com",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-pagespeed": "^0.4.1",
+    "grunt-umd": "~1.7.3",
+    "jquery": "~2.1.0",
+    "load-grunt-tasks": "^3.1.0",
+    "ngrok": "^2.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chriskinch/chriskinch.com"
+  },
+  "bugs": {
+    "url": "https://github.com/chriskinch/chriskinch.com/issues"
+  },
+  "dependencies": {
+    "letsencrypt": "^1.4.3"
+  }
+}

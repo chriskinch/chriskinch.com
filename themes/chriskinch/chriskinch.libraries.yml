@@ -1,0 +1,8 @@
+global-styling:
+    css:
+        theme:
+            css/styles.css: {}
+
+global-scripts:
+    js:
+        js/build/main.min.js: {}

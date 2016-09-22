@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Last FM blocks in the footer
+ */
+
+@import "../../base/config";
+
+#block-views-tweets-block {
+  //clear:left;
+  .block-title {
+    @include leader(0);
+  }
+}

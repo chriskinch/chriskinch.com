@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+@import "../../base/config";
+
+
+.block { /* Block wrapper */
+  margin-bottom: 1.5em;
+
+  .block-title {
+    @include adjust-font-size-to($h2-font-size);
+  }
+}
+
+.region-footer {
+  column-count: 3;
+  column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  padding-top: calc(352px + 1em);
+
+  > .block {
+    display: inline-block;
+    //margin: 0 0 1em;
+    width: 100%;
+  }
+
+  .block-title  {
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

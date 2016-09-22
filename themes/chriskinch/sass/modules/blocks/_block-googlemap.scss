@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Google maps strip in the footer
+ */
+
+@import "../../base/config";
+
+#block-block-1 {
+  position: absolute;
+  height: 352px;
+  top: 0;
+  //force full width
+  width: 100vw;
+  left: calc(50% - 50vw);
+}
+
+.gm-style {
+  color: $text;
+
+  img {
+    max-width: inherit;
+  }
+}
+
+.map-marker-info {
+  .title {
+    @include adjust-font-size-to( $h2-font-size );
+    @include leader(0.25);
+    @include trailer(0);
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1rem;
+    @include leader(0.25);
+    @include trailer(0.25);
+  }
+
+  .map-marker-meta {
+    font-style: italic;
+    font-size: 0.875rem;
+    color: $medium;
+    @include leader(0.25);
+    @include trailer(0.25);
+  }
+}

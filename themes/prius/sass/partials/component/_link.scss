@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Link.
+ */
+
+a {
+  color: $blue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.cta--primary {
+  @include style-cta($blue);
+}
+
+.cta--secondary {
+  @include style-cta($blue);
+}

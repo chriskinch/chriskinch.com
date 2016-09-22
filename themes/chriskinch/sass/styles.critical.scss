@@ -1,0 +1,31 @@
+/**
+ * @file
+ * Main style sheet for the incorperating components split into critical and non-critical
+ * portions. Uses the "Jacket" SASS method. See more here: 
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+$jacket: critical;
+
+// Config variables and mixins
+@import "base/config";
+
+// Base components and normalize
+@import "base/normalize";
+@import "base/forms";
+@import "base/fonts";
+@import "base/links";
+@import "base/tables";
+@import "base/typography";
+
+// Layouts
+@import "layout/responsive";
+
+// Site components
+@import "modules/pages";
+@import "modules/logo";
+@import "modules/navigation";
+@import "modules/views-styles";
+@import "modules/nodes";
+@import "modules/fields";
