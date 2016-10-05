@@ -2,9 +2,14 @@ local.settings.php
 .sass-cache
 .DS_Store
 settings.php
+composer.lock
+console/
 files/*
 !files/field
 themes/chriskinch/css/
+themes/chriskinch/js/build/
 node_modules/
 bower_components/
+vendor/
+libraries/
 backups/

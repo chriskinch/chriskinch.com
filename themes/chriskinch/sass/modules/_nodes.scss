@@ -29,7 +29,7 @@
     margin-bottom:2em;
 
     @include mq($from: regular) {
-      @include zen-grid-item(6, 1);
+      // @include zen-grid-item(6, 1);
     }
   }
 
@@ -38,7 +38,7 @@
     padding-right:0;
 
     @include mq($from: regular) {
-      @include zen-grid-item(17, 1, right);
+      // @include zen-grid-item(17, 1, right);
     }
   }
 

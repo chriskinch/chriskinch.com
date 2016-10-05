@@ -1,3 +1,9 @@
+enquirejs:
+  js:
+    ../../libraries/enquirejs/dist/enquire.min.js: {}
+  dependencies:
+    - core/drupalSettings
+
 global-styling:
     css:
         theme:
@@ -5,4 +11,8 @@ global-styling:
 
 global-scripts:
     js:
-        js/build/main.min.js: {}
+        js/build/theme.js: {}
+    dependencies:
+        - core/jquery
+        - core/drupal
+        - chriskinch/enquirejs

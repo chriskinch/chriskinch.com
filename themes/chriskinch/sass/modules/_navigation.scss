@@ -226,8 +226,8 @@
 
   #block-system-main-menu {
     @include mq($from: regular) {
-      @include zen-grid-item-base();
-      @include zen-grid-item(12, 1);
+      // @include zen-grid-item-base();
+      // @include zen-grid-item(12, 1);
       margin-top:-0.5em;
 
       ul.menu {
@@ -250,8 +250,8 @@
 
   #block-menu-menu-social-networks {
     @include mq($from: regular) {
-      @include zen-grid-item-base();
-      @include zen-grid-item(12, 1, right);
+      // @include zen-grid-item-base();
+      // @include zen-grid-item(12, 1, right);
       margin-top:-0.5em;
 
       ul.menu {

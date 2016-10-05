@@ -1,0 +1,29 @@
+{
+    "name": "chriskinch/chriskinch8.com",
+    "type": "project",
+    "authors": [
+        {
+            "name": "chriskinch",
+            "email": "kinchie@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+          "type": "package",
+          "package": {
+            "name": "wickynilliams/enquirejs",
+            "version": "2.1.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/WickyNilliams/enquire.js/archive/v2.1.2.zip",
+              "type": "zip"
+            }
+          }
+        }
+    ],
+    "require": {
+        "drupal/console": "v1.0.0-beta5",
+        "wickynilliams/enquirejs": "2.1.2"
+    }
+}

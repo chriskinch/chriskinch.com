@@ -35,11 +35,11 @@ $zen-column-count:  24;
   }
 
   @include mq($from: narrow, $until: regular) {
-    @include zen-grid-item(12, 1);
+    // @include zen-grid-item(12, 1);
   }
 
   @include mq($from: regular) {
-    @include zen-grid-item(8, 1);
+    // @include zen-grid-item(8, 1);
   }
 }
 

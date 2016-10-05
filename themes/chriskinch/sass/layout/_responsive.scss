@@ -37,7 +37,7 @@
   #footer,
   .group-meta,
   .group-images {
-    @include zen-grid-item-base();
+    // @include zen-grid-item-base();
   }
 
   /*
@@ -47,7 +47,7 @@
   #header,
   #main,
   #footer {
-    @include zen-grid-container();
+    // @include zen-grid-container();
   }
 
   /*

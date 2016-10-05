@@ -1,19 +1,18 @@
-require.config({
-    paths: {
-        'async': '/sites/chriskinch.com/themes/chriskinch/js/plugins/async'
-    }
-});
+var portfolioMap = (function() {
 
-define(['enquire', 'async!https://maps.googleapis.com/maps/api/js?v=3.14&key=AIzaSyBI5cYJFHCsdpNt3VVE5gqJDir94zt_qcw&libraries=places&sensor=false'], function() {
+    var init = function(selector) {
+        // Grab the element and kill it here if we can't find it.
+        var element = document.querySelector(selector);
+        if(!element) return;
 
-    var breakpoints = Drupal.settings.breakpoints;
-    var map;
+        var GoogleMapsLoader = require('google-maps');
+            GoogleMapsLoader.VERSION = '3.14';
+            GoogleMapsLoader.LIBRARIES = ['places'];
+            GoogleMapsLoader.KEY = 'AIzaSyBI5cYJFHCsdpNt3VVE5gqJDir94zt_qcw';
 
-    enquire.register(breakpoints.narrow, {
-        match : function() {
-
+        GoogleMapsLoader.load(function(google) {
             var work = new google.maps.LatLng(51.521243, -0.13977);
-            map = new google.maps.Map(document.getElementById('block-block-1'), {
+            var map = new google.maps.Map(element, {
                 center: work,
                 zoom: 16,
                 minZoom: 2,
@@ -28,38 +27,40 @@ define(['enquire', 'async!https://maps.googleapis.com/maps/api/js?v=3.14&key=AIz
             };
 
             var service = new google.maps.places.PlacesService(map);
-            service.getDetails(place_request, placeCallback);
+            service.getDetails(place_request, function(){
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                    // To add the marker to the map, use the 'map' property
+                    var marker = new google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map
+                    });
+                    
+                    var contentString = '<div class="map-marker-info">'+
+                    '<h4 class="title">'+ place.name +'</h4>'+
+                    '<p class="map-marker-meta">'+ place.vicinity +'</p>'+
+                    '<p>Current workplace and second home of Chris Kinch. Resident since August 2008. Kind of a big deal at the local pub.</p>'+
+                    '</div>';
+
+                    infowindow.setContent(contentString);
+                    infowindow.open(map, marker);
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map, this);
+                    });
+                }  
+            });
 
             var infowindow = new google.maps.InfoWindow({
                 maxWidth: 370,
                 disableAutoPan: true
             });
+        });
+    };
 
-            function placeCallback(place, status) {
-              if (status == google.maps.places.PlacesServiceStatus.OK) {
-                // To add the marker to the map, use the 'map' property
-                var marker = new google.maps.Marker({
-                    position: place.geometry.location,
-                    map: map
-                });
-                var contentString = '<div class="map-marker-info">'+
-                  '<h4 class="title">'+ place.name +'</h4>'+
-                  '<p class="map-marker-meta">'+ place.vicinity +'</p>'+
-                  '<p>Current workplace and second home of Chris Kinch. Resident since August 2008. Kind of a big deal at the local pub.</p>'+
-                  '</div>';
+    return {
+        init: init
+    };
 
-                infowindow.setContent(contentString);
-                infowindow.open(map, marker);
+})();
 
-                google.maps.event.addListener(marker, 'click', function() {
-                  infowindow.open(map, this);
-                });
-              }
-            }
-
-        }
-    });
-
-    return map
-
-});
+module.exports = portfolioMap;

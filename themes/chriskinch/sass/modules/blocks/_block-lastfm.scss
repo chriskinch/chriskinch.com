@@ -191,18 +191,18 @@
 
     .bar-1 {
       left:0;
-      @include animation(animation, eqkeys .3s linear 1s infinite alternate);
+      // @include animation(animation, eqkeys .3s linear 1s infinite alternate);
     }
 
     .bar-2 {
       left:50%;
       margin-left:-12.5%;
-      @include animation(animation, eqkeys .3s linear 1.35s infinite alternate);
+      // @include animation(animation, eqkeys .3s linear 1.35s infinite alternate);
     }
 
     .bar-3 {
       right:0;
-      @include animation(animation, eqkeys .3s linear 1.2s infinite alternate);
+      // @include animation(animation, eqkeys .3s linear 1.2s infinite alternate);
     }
   }
 
