@@ -1,4 +1,4 @@
-@import "config";
+@import "../config/config";
 
 /* =============================================================================
    Typography
@@ -10,9 +10,14 @@
    For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
    ========================================================================== */
 
+body {
+  font-family: $opensans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
 /*
- * Addresses font sizes and margins set differently in IE6/7
- * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ * Titles
  */
 
 h1, h2, h3, h4, h5, h6 {

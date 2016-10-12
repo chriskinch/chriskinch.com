@@ -7,38 +7,6 @@
 
 @include jacket(critical) {
 
-  // As non critical CSS is loaded via JS we style homepage teasers to avoid FOUC.
-  // Narrow and Regular only.
-  body:not(.savvior) {
-    .view-homepage {
-      @include mq($from: narrow, $until: regular) {
-        li {
-          float:left;
-          max-width:50%;
-
-          &:nth-child(2n+1) {
-            clear:left;
-          }
-        }
-      }
-
-      @include mq ($from: regular) {
-        li {
-          float:left;
-          max-width:33.33%;
-
-          &:nth-child(2n+1) {
-            clear:none;
-          }
-
-          &:nth-child(3n+1) {
-            clear:left;
-          }
-        }
-      }
-    }
-  }
-
   /*
    * General Views overrides
    */

@@ -9,13 +9,10 @@
 $jacket: non-critical;
 
 // Config variables and mixins
-@import "base/config";
-
-// Helpers
-@import "misc/wireframes";
+@import "config/config";
 
 // Layouts
-@import "layout/responsive";
+// @import "layout/responsive";
 
 // HTML tags
 @import "modules/tabs";
@@ -27,11 +24,12 @@ $jacket: non-critical;
 @import "modules/fields";
 
 // Specific components
-@import "modules/blocks/block";
-@import "modules/blocks/block-googlemap";
-@import "modules/blocks/block-webform";
-@import "modules/blocks/block-lastfm";
-@import "modules/blocks/block-twitter";
+@import "modules/module-term";
+// @import "modules/blocks/block";
+// @import "modules/blocks/block-googlemap";
+// @import "modules/blocks/block-webform";
+// @import "modules/blocks/block-lastfm";
+// @import "modules/blocks/block-twitter";
 
 // Misc elements
 @import "misc/print";

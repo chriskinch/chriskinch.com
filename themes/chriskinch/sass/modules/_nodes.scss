@@ -6,7 +6,7 @@
  * Style anything that isn't in the $content variable.
  */
 
-@import "../base/config";
+@import "../config/config";
 
 @include jacket(critical) {
 

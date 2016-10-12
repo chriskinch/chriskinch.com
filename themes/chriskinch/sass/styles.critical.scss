@@ -9,23 +9,23 @@
 $jacket: critical;
 
 // Config variables and mixins
-@import "base/config";
+@import "config/config";
+@import "config/fonts";
 
 // Base components and normalize
 @import "base/normalize";
 @import "base/forms";
-@import "base/fonts";
 @import "base/links";
 @import "base/tables";
 @import "base/typography";
 
 // Layouts
-@import "layout/responsive";
+// @import "layout/responsive";
 
 // Site components
-@import "modules/pages";
-@import "modules/logo";
-@import "modules/navigation";
-@import "modules/views-styles";
-@import "modules/nodes";
-@import "modules/fields";
+// @import "modules/pages";
+// @import "modules/logo";
+// @import "modules/navigation";
+// @import "modules/views-styles";
+// @import "modules/nodes";
+// @import "modules/fields";
