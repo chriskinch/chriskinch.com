@@ -15,21 +15,26 @@ $jacket: non-critical;
 // @import "layout/responsive";
 
 // HTML tags
-@import "modules/tabs";
-@import "modules/pages";
-@import "modules/navigation";
-@import "modules/views-styles";
-@import "modules/nodes";
-@import "modules/forms";
-@import "modules/fields";
+
+// @import "modules/pages";
+// @import "modules/navigation";
+// @import "modules/views-styles";
+// @import "modules/nodes";
+// @import "modules/forms";
+// @import "modules/fields";
 
 // Specific components
+@import "modules/module-teaser";
 @import "modules/module-term";
-// @import "modules/blocks/block";
+@import "modules/module-footer";
+@import "modules/blocks/block";
 // @import "modules/blocks/block-googlemap";
-// @import "modules/blocks/block-webform";
+@import "modules/blocks/block-contact";
 // @import "modules/blocks/block-lastfm";
 // @import "modules/blocks/block-twitter";
+
+// Field components
+@import "modules/fields/field-category";
 
 // Misc elements
 @import "misc/print";

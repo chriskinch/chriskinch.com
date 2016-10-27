@@ -11,7 +11,8 @@
    * The active item in a Drupal menu
    */
 
-  li a.active {
+  // Have to use tag selectors to overrite Classy 
+  ul.menu a.is-active {
     color: $page;
   }
 
@@ -19,7 +20,7 @@
    * The skip-link link will be for the mobile popout nav in mobile.
    */
 
-  #skip-link {
+  .skip-link {
     position: fixed;
     left: 0;
     top: 0;
@@ -28,41 +29,29 @@
     width:100%;
     margin: 0;
     background-color:$dark;
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
 
-    a {
-      @include element-invisible-off;
-      position: relative !important;
-      display:inline-block;
-      margin: 7px 5px;
-
-      &:before {
-        font-family: $base-font-family;
-        display: block;
-        text-align: center;
-        content: 'menu';
-        color: $light;
-        border: 2px solid $light;
-        border-radius: 0.3em;
-        padding: 0px 1em 2px;
-        line-height: 30px;
-      }
-
-      &:hover:before {
-        color: $white;
-        border-color: $white;
-      }
+    &:before {
+      font-family: $base-font-family;
+      display: inline-block;
+      text-align: center;
+      content: 'menu';
+      color: $light;
+      border: 2px solid $light;
+      border-radius: 0.3em;
+      padding: 0px 1em 2px;
+      line-height: 30px;
     }
 
-    span {
-      @include element-invisible;
+    &:hover:before {
+      color: $white;
+      border-color: $white;
     }
 
     @include mq($from: regular) {
       @include element-invisible;
-
-      a {
-        @include element-invisible;
-      }
     }
   }
 

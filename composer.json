@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "drupal/console": "v1.0.0-beta5",
+        "drupal/console": "1.0.0-beta5",
         "wickynilliams/enquirejs": "2.1.2"
     }
 }

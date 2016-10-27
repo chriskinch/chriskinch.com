@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Rules for laying out term pages (inc. the homepage).
+ */
+
+@import "../config/config";
+
+@include jacket(critical) {
+
+    .view-frontpage .view-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mq($from: narrow, $until: regular) {
+            .views-row {
+                width: calc(100% / 2);
+            }
+        }
+
+        @include mq($from: regular) {
+            .views-row {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+// END CRITICAL
+}

@@ -1,21 +1,14 @@
 /**
  * @file
- * Webform block in the footer
+ * Contact form block
  */
 
 @import "../../config/config";
 
 $zen-column-count:  24;
-#block-webform-client-block-152 {
+.block-contact-block {
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background: #222;
-  z-index: 10;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 352px;
-  box-sizing:border-box;
 
   .block-title {
     @include leader(0);
@@ -43,21 +36,23 @@ $zen-column-count:  24;
   }
 }
 
-#block-webform-client-block-152 {
+.block-contact-block {
   .form-item {
     position: relative;
     z-index: 10;
 
     input,
     textarea {
+      position: relative;
       width: 100%;
       box-sizing:border-box;
       background:lighten($dark, 10%);
-    }
-  }
+      color: $white;
 
-  textarea {
-    text-indent: 80px;
+      &:focus {
+        z-index: 10;
+      }
+    }
   }
 
   label {
@@ -69,29 +64,15 @@ $zen-column-count:  24;
     font-weight:normal;
     color:$medium;
     position: relative;
+    z-index: 1;
     pointer-events: none;
-
-    &:after {
-      content:":"
-    }
-
-    .form-required {
-      display:none;
-    }
   }
 
-  input.form-submit {
-    width:auto;
-    float:right;
-  }
+  .form-actions {
+    text-align: right;
 
-  #edit-submitted-name {    padding-left:5em; }
-  #edit-submitted-email {   padding-left:5em; }
-
-  .mollom-privacy {
-    @include adjust-font-size-to(11px, 0.75);
-    width: 130px;
-    float: left;
-    color:darken($page, 30%);
+    .button:last-child {
+      margin-right: 0;
+    }
   }
 }

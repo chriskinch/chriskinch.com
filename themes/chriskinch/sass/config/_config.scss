@@ -55,7 +55,7 @@ $opensans: 'Open Sans', Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $opensans; // The font family set on the html element.
@@ -72,8 +72,8 @@ $text:            #444444;
 $primary_color:   #eebb00;
 $primary_light:   #eecc44;
 $primary_dark:    #DDAA00;
+$white:			  #fefefe;
 $links:           #cc8844;
-$white:           #ffffff;
 $light:           #dddddd;
 $light_dark:      #cccccc;
 $medium_light:    #999999;
@@ -112,26 +112,19 @@ $mq-static-breakpoint: regular;
 // to this list, ordered by width.
 // $mq-show-breakpoints: (mobile, mobilels, narrow, regular, wide);
 
+
+//
+// Grid
+//
 // We are going to create a 1200px wide, 24 column grid with 3em gutters between
 // columns (applied as 1.5em of left/right padding on each column).
-$zen-columns:  24;
-$zen-gutters:  3em;
-$zen-half-gutter-width: $zen-gutters / 2;
+$grid-columns:  24;
+$grid-gutter: 1.5em;
+$grid-gutters: $grid-gutter * 2;
 
 // Define max site width.
 $max-site-width: 1200px;
 
-$max-col-width: 500px;
-
-// The amount lists, blockquotes and comments are indented.
-$indent-amount: 30px;
-
-// You can generate more efficient CSS if you manually apply the
-// zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
-// $zen-auto-include-flow-item-base: false;
-
-$zen-box-sizing: "universal-border-box";
 
 //
 // Animations

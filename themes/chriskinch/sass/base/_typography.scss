@@ -22,7 +22,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $opensans;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1 {
@@ -48,7 +48,7 @@ h1 {
 
 h2 {
   @include adjust-font-size-to( $h2-font-size );
-  @include leader(1, $h2-font-size);
+  @include leader(0.75, $h2-font-size);
   @include trailer(1, $h2-font-size);
 
   @include mq($from: narrow) {

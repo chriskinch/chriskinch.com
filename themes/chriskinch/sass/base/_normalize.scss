@@ -140,7 +140,7 @@ strong {
 
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: rhythm(1) $indent-amount;
+  margin: rhythm(1) 2em;
 }
 
 /*
@@ -264,7 +264,7 @@ ul,
 }
 
 dd {
-  margin: 0 0 0 $indent-amount; /* LTR */
+  margin: 0 0 0 2em; /* LTR */
 }
 
 ul, ol, .item-list ul, .item-list ol {
@@ -281,7 +281,7 @@ menu,
 ol,
 ul,
 .item-list ul /* Drupal override */ {
-  padding: 0 0 0 $indent-amount; /* LTR */
+  padding: 0 0 0 2em; /* LTR */
 }
 
 /*

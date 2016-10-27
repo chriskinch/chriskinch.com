@@ -13,20 +13,6 @@ form {
 }
 
 /*
- * Define consistent border, margin, and padding
- */
-
-fieldset {
-  border-color: #c0c0c0;
-  margin: 0 2px;
-  /* Apply borders and padding that keep the vertical rhythm. */
-  @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
-  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
-  @include apply-side-rhythm-border(left,  $width: 1px, $lines: 0.65);
-  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.65);
-}
-
-/*
  * 1. Corrects color not being inherited in IE6/7/8/9
  * 2. Corrects text not wrapping in FF3
  */
@@ -49,6 +35,9 @@ textarea {
   font-size: 100%; /* 1 */
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
+  border: none;
+  padding: 0.55em 1em;
+  border-radius: 0.2em;
 }
 
 /*
@@ -69,6 +58,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  @include button-pill;
   cursor: pointer; /* 1 */
   -webkit-appearance: button; /* 2 */
 }
