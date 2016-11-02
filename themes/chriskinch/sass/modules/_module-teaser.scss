@@ -6,7 +6,6 @@
 @import "../config/config";
 
 @include jacket(critical) {
-
     .node--view-mode-teaser {
         background-color: $white;
         display: flex;
@@ -14,6 +13,11 @@
         flex-wrap: wrap;
         margin: 1em;
         padding: 1.5em;
+        
+        @include mq($from: narrow) {
+            margin-left:1em;
+            margin-right:1em;
+        }
 
         .field--name-field-teaser-image {
             order: -1;

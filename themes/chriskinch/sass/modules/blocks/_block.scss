@@ -7,15 +7,15 @@
 
 
 .block { /* Block wrapper */
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
 
-  .block-title {
-    @include adjust-font-size-to($h2-font-size);
-  }
+.block-title {
+	@include adjust-font-size-to($h2-font-size);
 }
 
 .region-footer {
-  .block-title  {
-    color: $white;
-  }
+    .block-title  {
+    	color: $white;
+    }
 }

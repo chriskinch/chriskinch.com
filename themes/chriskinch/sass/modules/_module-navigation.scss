@@ -59,28 +59,20 @@
    * Navigation bar
    */
 
-  #navigation {
-    position: fixed;
-    width: 250px;
-    left: -250px;
-    top: 0;
-    bottom: 0;
-    border-top: 50px solid darken($dark, 5%);
+  .region-primary-menu,
+  .region-secondary-menu {
+    //position: fixed;
+    //width: 250px;
+    //left: -250px;
+    //top: 0;
+    //bottom: 0;
+    // border-top: 50px solid darken($dark, 5%);
     background: $dark;
-    padding: 0;
-
-    .region-navigation {
-      padding: 0;
-    }
 
     ul.menu {
       margin: 0;
-      padding: 0;
-      text-align: left; /* LTR */
 
       li {
-        list-style-type: none;
-        list-style-image: none;
         border-bottom:1px solid rgba(255,255,255,0.05);
 
         a, {
@@ -213,7 +205,7 @@
    * Main menu and Secondary menu links
    */
 
-  #block-system-main-menu {
+  .menu--main {
     @include mq($from: regular) {
       // @include zen-grid-item-base();
       // @include zen-grid-item(12, 1);
@@ -227,7 +219,7 @@
     }
   }
 
-  #secondary-menu {
+  .region-primary-menu {
     @include mq($from: regular) {
       float: right; /* LTR */
     }
@@ -237,7 +229,7 @@
    * Social menu block
    */
 
-  #block-menu-menu-social-networks {
+  .menu--social-networks {
     @include mq($from: regular) {
       // @include zen-grid-item-base();
       // @include zen-grid-item(12, 1, right);
