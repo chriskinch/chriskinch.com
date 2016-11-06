@@ -84,7 +84,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint']
             },
             scripts: {
-                files: ['<%= meta.paths.theme.js %>/src/**/*.js'],
+                files: ['<%= meta.paths.theme.js %>/src/*.js', '<%= meta.paths.theme.js %>/theme.js'],
                 tasks: ['compilejs']
             },
             styles: {
