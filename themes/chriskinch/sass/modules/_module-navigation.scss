@@ -59,33 +59,28 @@
    * Navigation bar
    */
 
-  .region-primary-menu,
-  .region-secondary-menu {
-    //position: fixed;
-    //width: 250px;
-    //left: -250px;
-    //top: 0;
-    //bottom: 0;
-    // border-top: 50px solid darken($dark, 5%);
+  .region-primary-menu {
+    position: fixed;
+    width: 250px;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    border-top: 50px solid darken($dark, 5%);
     background: $dark;
 
-    ul.menu {
-      margin: 0;
+    .menu-item {
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
 
-      li {
-        border-bottom:1px solid rgba(255,255,255,0.05);
+    a {
+      color:$medium_dark;
+      font-size: 0.875em;
+      text-transform: uppercase;
+      padding:1em;
+      display: block;
 
-        a, {
-          color:$medium_dark;
-          font-size: 0.875em;
-          text-transform: uppercase;
-          padding:1em;
-          display: block;
-
-          &:hover {
-            color:$page;
-          }
-        }
+      &:hover {
+        color:$page;
       }
     }
 
@@ -97,7 +92,7 @@
       font-size: 0.6em;
       color: $text;
       text-transform: uppercase;
-      background-color: darken($dark, 5%);
+      background-color: rgba(0,0,0,0.5);
       margin: 0;
       line-height: 1;
       padding: 1em;
@@ -110,29 +105,17 @@
       height: 100px;
       width: 100%;
       left: 0;
+      top: 0;
       border: 0;
       position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      .region-navigation {
-        @include grid-full-container;
-        position: relative;
-        line-height: 1em;
-        top: 50%;
-      }
-
-      ul.menu {
-        li {
-          border-bottom:none;
+      .menu-item {
           float: left;
-
-          a, {
-            padding:0;
-          }
-        }
-      }
-
-      .block-title {
-        @include element-invisible;
+          padding-top: 0;
+          border-bottom: none;
       }
     }
     // --- //
@@ -192,36 +175,11 @@
    * Menu blocks
    */
 
-  .block-menu,
-  .block-menu-block {
+  .block-menu {
     .block-title {
       @include mq($from: regular){
         @include element-invisible();
       }
-    }
-  }
-
-  /*
-   * Main menu and Secondary menu links
-   */
-
-  .menu--main {
-    @include mq($from: regular) {
-      // @include zen-grid-item-base();
-      // @include zen-grid-item(12, 1);
-      margin-top:-0.5em;
-
-      ul.menu {
-        li {
-          padding-right: 2em; /* LTR */
-        }
-      }
-    }
-  }
-
-  .region-primary-menu {
-    @include mq($from: regular) {
-      float: right; /* LTR */
     }
   }
 
@@ -233,20 +191,20 @@
     @include mq($from: regular) {
       // @include zen-grid-item-base();
       // @include zen-grid-item(12, 1, right);
-      margin-top:-0.5em;
+      // margin-top:-0.5em;
 
-      ul.menu {
-        float:right;
+      // ul.menu {
+      //   float:right;
 
-        li {
-          padding-right: 0.75em;
+      //   li {
+      //     padding-right: 0.75em;
 
-          a {
-            @include icon-only;
-            font-size:1.5em;
-          }
-        }
-      }
+      //     a {
+      //       @include icon-only;
+      //       font-size:1.5em;
+      //     }
+      //   }
+      // }
     }
   }
 

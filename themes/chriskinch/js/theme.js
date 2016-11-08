@@ -24,11 +24,10 @@ enquire.register(breakpoints.narrow, {
 
 // Snap style navigation
 var snapnav = require("./src/snapnav");
-console.log(snapnav);
 //////////////////////////////
 // Mobile + Tablet navigation menu
 //////////////////////////////
-enquire.register(breakpoints.default, {
+enquire.register(breakpoints.mobile_only, {
 	match : function() {
 		snapnav.setSnapNav();
 	}

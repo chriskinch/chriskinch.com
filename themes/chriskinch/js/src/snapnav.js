@@ -15,11 +15,11 @@ var snapNav = (function(){
     };
 
     var setSnapNav = function(){
-        $(document).on('click', '#skip-link a, .navigation-open', function(event) {
+        $(document).on('click', '.skip-link, .navigation-open', function(event) {
             if($(event.target).is('.navigation-open')) {
                 toggleMobileNav();
                 return false;
-            } else if($(event.target).is('#skip-link a')) {
+            } else if($(event.target).is('.skip-link')) {
                 toggleMobileNav();
                 return false;
             } else {
