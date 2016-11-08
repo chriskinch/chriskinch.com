@@ -91,7 +91,28 @@ module.exports = function(grunt) {
                 files: ['<%= meta.paths.theme.sass %>/**/*.scss'],
                 tasks: ['compilecss']
             }
-        }
+        },
+
+        fontello: {
+            dist: {
+                options: {
+                    config  : '<%= meta.paths.theme.base %>/fonts/fontello/config.json',
+                    fonts   : '<%= meta.paths.theme.base %>/fonts/fontello',
+                    styles  : '<%= meta.paths.theme.sass %>/config',
+                    scss    : true,
+                    exclude: [
+                        'animation.css',
+                        'fontello-ie7.css',
+                        'fontello-ie7-codes.css',
+                        'fontello-codes.css',
+                        'fontello-embedded.css',
+                        'fontello.eot',
+                        'fontello.ttf',
+                        'fontello.svg'
+                    ],
+                }
+            },
+        },
 
     });
 

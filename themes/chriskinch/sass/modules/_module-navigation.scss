@@ -68,6 +68,10 @@
     border-top: 50px solid darken($dark, 5%);
     background: $dark;
 
+    .menu {
+      margin-left: 0;
+    }
+
     .menu-item {
       border-bottom:1px solid rgba(255,255,255,0.05);
     }
@@ -111,6 +115,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-left: calc((100vw - #{map-get($mq-breakpoints, wide)}) / 2);
+      padding-right: calc((100vw - #{map-get($mq-breakpoints, wide)}) / 2);
 
       .menu-item {
           float: left;
@@ -189,22 +195,15 @@
 
   .menu--social-networks {
     @include mq($from: regular) {
-      // @include zen-grid-item-base();
-      // @include zen-grid-item(12, 1, right);
-      // margin-top:-0.5em;
+      .menu-item {
+        padding-right: 0.75em;
+      }
 
-      // ul.menu {
-      //   float:right;
-
-      //   li {
-      //     padding-right: 0.75em;
-
-      //     a {
-      //       @include icon-only;
-      //       font-size:1.5em;
-      //     }
-      //   }
-      // }
+      a {
+        @include icon-only;
+        padding: 0;
+        font-size:1.5em;
+      }
     }
   }
 
@@ -214,7 +213,6 @@
   .menu-google:before   { @include icon-gplus-squared;    }
   .menu-twitter:before  { @include icon-twitter-squared;  }
   .menu-lastfm:before   { @include icon-lastfm-rect;      }
-  .menu-contact:before  { @include icon-mail-alt;         }
   .menu-download:before { @include icon-download;         }
 
 // END CRITICAL

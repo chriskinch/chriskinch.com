@@ -4,29 +4,7 @@
    Fonts
    ========================================================================== */
 
-/* Instead of relying on the fonts that are available on a user's computer, you
-   can use web fonts which, like images, are resources downloaded to the user's
-   browser. Because of the bandwidth and rendering resources required, web fonts
-   should be used with care.
-
-   Numerous resources for web fonts can be found on Google. Here are a few
-   websites where you can find Open Source fonts to download:
-   - http://www.fontsquirrel.com/fontface
-   - http://www.theleagueofmoveabletype.com
-
-   In order to use these fonts, you will need to convert them into formats
-   suitable for web fonts. We recommend the free-to-use Font Squirrel's
-   Font-Face Generator:
-     http://www.fontsquirrel.com/fontface/generator
-
-   The following is an example @font-face declaration. This font can then be
-   used in any ruleset using a property like this:  font-family: Example, serif;
-
-   Since we're using Sass, you'll need to declare your font faces here, then you
-   can add them to the font variables in the _base.scss partial.
-*/
-
-// Importing fonts from Google Fonts via @import
+// Importing fonts from Google Fonts.
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -48,25 +26,3 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
-//Fontello icons
-@font-face {
-  font-family: 'fontello';
-  src: url('/sites/chriskinch.com/themes/chriskinch/fonts/fontello/font/fontello.eot?90965817');
-  src: url('/sites/chriskinch.com/themes/chriskinch/fonts/fontello/font/fontello.eot?90965817#iefix') format('embedded-opentype'),
-       url('/sites/chriskinch.com/themes/chriskinch/fonts/fontello/font/fontello.woff?90965817') format('woff'),
-       url('/sites/chriskinch.com/themes/chriskinch/fonts/fontello/font/fontello.ttf?90965817') format('truetype'),
-       url('/sites/chriskinch.com/themes/chriskinch/fonts/fontello/font/fontello.svg?90965817#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?90965816#fontello') format('svg');
-  }
-}
-*/
