@@ -114,15 +114,39 @@ module.exports = function(grunt) {
             },
         },
 
+        'string-replace': {
+            fonts: {
+                files: {
+                    '<%= meta.paths.theme.sass %>/config/_fontello.scss': '<%= meta.paths.theme.sass %>/config/_fontello.scss',
+                },
+                options: {
+                    replacements: [{
+                        pattern: /.*(eot|ttf|svg).*\n\r*/gm,
+                        replacement: ""
+                    }, {
+                        pattern: "format('woff'),",
+                        replacement: "format('woff');"
+                    }, {
+                        pattern: "url",
+                        replacement: 'src: url'
+                    }, {
+                        pattern: /..\/font\//g,
+                        replacement: '../fonts/fontello/'
+                    }]
+                }
+            }
+        }
+
     });
 
     // Grunt Watch task listener
     require('load-grunt-tasks')(grunt);
 
     // Default task(s).
-    grunt.registerTask('default', ['compilejs', 'compilecss']);
+    grunt.registerTask('default', ['compileicons', 'compilejs', 'compilecss']);
     grunt.registerTask('compilejs', ['jshint', 'browserify']);
     grunt.registerTask('compilecss', ['sass']);
+    grunt.registerTask('compileicons', ['fontello', 'string-replace:fonts']);
     // Ngrok custom task
     grunt.registerTask('speed', 'Run pagespeed with ngrok', function() {
         var done = this.async();
