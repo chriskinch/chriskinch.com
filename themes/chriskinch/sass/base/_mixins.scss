@@ -8,6 +8,11 @@
   max-width: $max-site-width;
 }
 
+@mixin full-viewport-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute !important;

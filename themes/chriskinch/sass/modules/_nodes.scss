@@ -6,8 +6,6 @@
  * Style anything that isn't in the $content variable.
  */
 
-@import "../config/config";
-
 .view-mode-full .group-meta {
     @include clearfix;
     margin-bottom:2em;

@@ -3,8 +3,6 @@
 * Views Styling
 */
 
-@import "../config/config";
-
 @include jacket(critical) {
     .node--view-mode-teaser {
         background-color: $white;

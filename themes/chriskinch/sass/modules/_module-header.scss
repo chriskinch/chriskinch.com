@@ -5,6 +5,10 @@
     width:100%;
     background-color: $primary_light;
     padding: 0 $grid-gutter $grid-gutter $grid-gutter;
+
+    @include mq($from: regular) {
+        @include full-viewport-width;
+    }
 }
 
 .site-name { /* The name of the website */

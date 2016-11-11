@@ -3,8 +3,6 @@
  * Views Styling
  */
 
-@import "../config/config";
-
 @include jacket(critical) {
 
   // As non critical CSS is loaded via JS we style homepage teasers to avoid FOUC.
