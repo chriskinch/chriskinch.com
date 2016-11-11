@@ -1,12 +1,15 @@
 // Theme JS dependencies via browserify/webpack
 var labelhide = require("./src/labelhide");
 var map = require("./src/googlemap");
+var domready = require("domready");
 
 // Theme dependancies via libraries.yml
 var breakpoints = drupalSettings.breakpoints_settings.chriskinch;
 
 // Init for contact form label hide/show on chnage
-labelhide.init('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea');
+domready(function(){
+	labelhide.init('.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea');
+});
 
 
 // Only init Google Maps on narrow and above
