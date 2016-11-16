@@ -112,18 +112,22 @@ $mq-static-breakpoint: regular;
 // to this list, ordered by width.
 // $mq-show-breakpoints: (mobile, mobilels, narrow, regular, wide);
 
-
 //
-// Grid
+// Layout
 //
-// We are going to create a 1200px wide, 24 column grid with 3em gutters between
-// columns (applied as 1.5em of left/right padding on each column).
-$grid-columns:  24;
+// Custom layout related variables
+$grid-columns: (
+    mobile:   1,
+    mobilels: 1,
+    narrow:   2,
+    regular:  3,
+    wide:     3
+);
 $grid-gutter: 1.5em;
 $grid-gutters: $grid-gutter * 2;
 
 // Define max site width.
-$max-site-width: 1200px;
+$max-site-width: map-get($mq-breakpoints, wide);
 
 
 //

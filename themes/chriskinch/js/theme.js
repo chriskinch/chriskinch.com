@@ -15,7 +15,7 @@ domready(function(){
 // Only init Google Maps on narrow and above
 enquire.register(breakpoints.narrow, {
 	match : function() {
-		map.init('.search-block-form');
+		map.init('#block-googlemapfullwidth');
 	}
 });
 

@@ -3,13 +3,12 @@
  * Google maps strip in the footer
  */
 
-#block-block-1 {
+#block-googlemapfullwidth {
   position: absolute;
-  height: 352px;
-  top: 0;
-  //force full width
-  width: 100vw;
-  left: calc(50% - 50vw);
+  height: 359px;
+  top: 2em;
+  left: 0;
+  right: 0;
 }
 
 .gm-style {

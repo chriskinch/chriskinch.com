@@ -113,8 +113,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-left: calc((100vw - #{map-get($mq-breakpoints, wide)}) / 2);
-      padding-right: calc((100vw - #{map-get($mq-breakpoints, wide)}) / 2);
+      padding-left: calc((100vw - #{$max-site-width}) / 2);
+      padding-right: calc((100vw - #{$max-site-width}) / 2);
 
       .menu-item {
           float: left;

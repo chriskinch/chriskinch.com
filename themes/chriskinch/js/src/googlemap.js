@@ -1,7 +1,7 @@
 var portfolioMap = (function() {
 
     var init = function(selector) {
-        // Grab the element and kill it here if we can't find it.
+        // Grab the element or kill it here if we can't find it.
         var element = document.querySelector(selector);
         if(!element) return;
 
@@ -27,7 +27,8 @@ var portfolioMap = (function() {
             };
 
             var service = new google.maps.places.PlacesService(map);
-            service.getDetails(place_request, function(){
+            service.getDetails(place_request, function(place, status){
+                console.log(this);
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     // To add the marker to the map, use the 'map' property
                     var marker = new google.maps.Marker({
