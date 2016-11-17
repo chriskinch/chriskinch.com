@@ -11,18 +11,6 @@ $jacket: non-critical;
 // Config variables and mixins
 @import "config/config";
 
-// Layouts
-// @import "layout/responsive";
-
-// HTML tags
-
-// @import "modules/pages";
-// @import "modules/navigation";
-// @import "modules/views-styles";
-// @import "modules/nodes";
-// @import "modules/forms";
-// @import "modules/fields";
-
 // Specific components
 @import "modules/module-teaser";
 @import "modules/module-term";
@@ -30,8 +18,6 @@ $jacket: non-critical;
 @import "modules/blocks/block";
 @import "modules/blocks/block-googlemap";
 @import "modules/blocks/block-contact";
-// @import "modules/blocks/block-lastfm";
-// @import "modules/blocks/block-twitter";
 
 // Field components
 @import "modules/fields/field-group-meta";

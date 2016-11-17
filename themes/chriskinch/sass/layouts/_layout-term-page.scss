@@ -3,8 +3,6 @@
  * Rules for laying out term pages (inc. the homepage).
  */
 
-@import "../config/config";
-
 @include jacket(critical) {
 
     .view-frontpage {

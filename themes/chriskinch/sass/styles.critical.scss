@@ -25,18 +25,14 @@ $jacket: critical;
 // Layouts
 @import "layouts/layout-page";
 @import "layouts/layout-term-page";
+@import "layouts/layout-node";
 
 // Site components
 @import "modules/module-header";
 @import "modules/module-logo";
 @import "modules/module-navigation";
 @import "modules/module-teaser";
-// @import "modules/pages";
-// @import "modules/logo";
-// @import "modules/navigation";
-// @import "modules/views-styles";
-// @import "modules/nodes";
-// @import "modules/fields";
 
-// Field components
+// Specific components
+@import "modules/blocks/block-page-title";
 @import "modules/fields/field-teaser-image";
