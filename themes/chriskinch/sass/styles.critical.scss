@@ -1,10 +1,6 @@
-/**
- * @file
- * Main style sheet for the incorperating components split into critical and non-critical
- * portions. Uses the "Jacket" SASS method. See more here: 
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */
+/* =============================================================================
+   Critical stylesheet
+   ========================================================================== */
 
 $jacket: critical;
 
@@ -27,12 +23,14 @@ $jacket: critical;
 @import "layouts/layout-term-page";
 @import "layouts/layout-node";
 
-// Site components
+// General components
 @import "modules/module-header";
 @import "modules/module-logo";
 @import "modules/module-navigation";
 @import "modules/module-teaser";
 
-// Specific components
+// Block components
 @import "modules/blocks/block-page-title";
+
+// Field components
 @import "modules/fields/field-teaser-image";

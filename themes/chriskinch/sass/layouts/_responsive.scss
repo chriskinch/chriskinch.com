@@ -1,14 +1,3 @@
-/**
- * @file
- * Rules for the responsive layout broken into sub components.
- *
- * Define CSS classes to create a table-free, 3-column, 2-column, or single
- * column layout depending on whether blocks are enabled in the left or right
- * columns.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
- */
-
 @include jacket(critical) {
 
   /*

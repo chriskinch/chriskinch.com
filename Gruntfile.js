@@ -37,6 +37,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '<%= meta.paths.theme.css %>/styles.critical.css': '<%= meta.paths.theme.sass %>/styles.critical.scss',
+                    '<%= meta.paths.theme.css %>/styles.noncritical.css': '<%= meta.paths.theme.sass %>/styles.noncritical.scss',
                     '<%= meta.paths.theme.css %>/styles.css': '<%= meta.paths.theme.sass %>/styles.scss'
                 }
             }
