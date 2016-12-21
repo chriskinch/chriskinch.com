@@ -7,7 +7,7 @@ enquirejs:
 global-styling:
     css:
         theme:
-            css/styles.critical.css: { type: inline }
+            css/styles.critical.css: { inline: true }
             css/styles.noncritical.css: {}
 
 global-scripts:
