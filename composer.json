@@ -36,6 +36,7 @@
     },
     "extra": {
         "installer-paths": {
+            "../../core": ["type:drupal-core"],
             "modules/contrib/{$name}": ["type:drupal-module"],
             "modules/custom/{$name}": ["type:drupal-custom-module"],
             "profiles/contrib/{$name}": ["type:drupal-profile"],
