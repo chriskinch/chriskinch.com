@@ -8,6 +8,7 @@ files/*
 !files/field
 themes/chriskinch/css/
 themes/chriskinch/js/build/
+modules/contrib/
 node_modules/
 bower_components/
 vendor/
