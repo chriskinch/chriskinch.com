@@ -1,9 +1,0 @@
-<?php
-
-// Core mdoule code
-
-function chriskinch_core_update_8000(){
-	module_enable([
-		'contact_block'
-	]);
-}

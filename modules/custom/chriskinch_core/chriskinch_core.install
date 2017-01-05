@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the chriskinch_core module.
+ */
+
+/**
+ * Install the CSS Inline module.
+ */
+function chriskinch_core_update_8000(){
+	\Drupal::service('module_installer')->install(['css_inline']);
+}
