@@ -9,7 +9,7 @@ files/*
 !files/config*
 themes/chriskinch/css/
 themes/chriskinch/js/build/
-modules/contrib/
+!modules/custom/
 node_modules/
 bower_components/
 vendor/

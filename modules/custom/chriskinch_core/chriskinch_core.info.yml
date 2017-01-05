@@ -1,0 +1,6 @@
+name: Chris Kinch Core
+description: 'Core hooks like enables and disables'
+type: module
+package: Site
+version: VERSION
+core: 8.x
