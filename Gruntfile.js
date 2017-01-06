@@ -55,13 +55,11 @@ module.exports = function(grunt) {
             },
             local_desktop: {
                 options: {
-                    url: 'http://chriskinch.ngrok.com',
                     strategy: 'desktop'
                 }
             },
             local_mobile: {
                 options: {
-                    url: 'http://chriskinch.ngrok.com',
                     strategy: 'mobile'
                 }
             },
@@ -151,8 +149,10 @@ module.exports = function(grunt) {
     // Ngrok custom task
     grunt.registerTask('speed', 'Run pagespeed with ngrok', function() {
         var done = this.async();
-        var port = 80;
-        ngrok.connect(port, function(err, url) {
+        var opt = {
+            host_header: 'local.chriskinch8.com'
+        };
+        ngrok.connect(opt, function(err, url) {
             if (err !== null) {
                 grunt.fail.fatal(err);
                 return done();
