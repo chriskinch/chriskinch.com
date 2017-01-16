@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Core module file for the site.
+ */
+
+/**
+ * Override or insert variables into the node templates.
+ */
+function chriskinch_core_preprocess_node(&$variables) {
+	// Check if in teaser view mode.
+	if($variables['view_mode'] == 'teaser') {
+		// If there is no teaser image available replace it with the primary image.
+		if(!isset($variables['content']['field_teaser_image'][0])){
+			$variables['content']['field_teaser_image'] = $variables['content']['field_primary_image'];
+		}
+		hide($variables['content']['field_primary_image']);
+	}
+}
