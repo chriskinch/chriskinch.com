@@ -18,6 +18,9 @@ $jacket: critical;
 @import "base/tables";
 @import "base/typography";
 
+//Misc & Helper
+@import "misc/hidden";
+
 // Layouts
 @import "layouts/layout-page";
 @import "layouts/layout-term-page";

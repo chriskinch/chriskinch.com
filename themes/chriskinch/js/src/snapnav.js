@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-var snapNav = (function(){  
+var snapNav = (function(){
     var toggleMobileNav = function() {
         var top = $('body').offset().top - $(window).scrollTop();
 
@@ -15,11 +15,13 @@ var snapNav = (function(){
     };
 
     var setSnapNav = function(){
-        $(document).on('click', '.skip-link, .navigation-open', function(event) {
-            if($(event.target).is('.navigation-open')) {
-                toggleMobileNav();
-                return false;
-            } else if($(event.target).is('.skip-link')) {
+        if(this.isSet){ // If this init has been run before exit.
+            return;
+        }
+
+        $(document).on('click', '.skip-link, .layout-container', function(event) {
+            var target = $(event.target);
+            if(target.is('.skip-link') || target.is('.layout-container')) {
                 toggleMobileNav();
                 return false;
             } else {
@@ -27,6 +29,8 @@ var snapNav = (function(){
                 return;
             }
         });
+
+        this.isSet = true;
     };
 
     return {

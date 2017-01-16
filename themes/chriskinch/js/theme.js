@@ -32,14 +32,17 @@ var snapnav = require("./src/snapnav");
 //////////////////////////////
 enquire.register(breakpoints.mobile_only, {
 	match : function() {
-		snapnav.setSnapNav();
+		console.log("mob only");
+			snapnav.setSnapNav();
 	}
 }).register(breakpoints.skinny_only, {
 	match : function() {
+		console.log("skinny only");
 		snapnav.setSnapNav();
 	}
 }).register(breakpoints.narrow_only, {
 	match : function() {
+		console.log("narrow only");
 		snapnav.setSnapNav();
 	}
 });

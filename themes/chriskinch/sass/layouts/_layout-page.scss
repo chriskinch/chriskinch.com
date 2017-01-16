@@ -3,6 +3,7 @@
     // Center the page.
     .layout-container {
         @include grid-full-container;
+        transition: transform 0.25s;
     }
 
 }
