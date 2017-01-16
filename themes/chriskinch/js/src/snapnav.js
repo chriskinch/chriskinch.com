@@ -3,14 +3,7 @@ var $ = require('jquery');
 var snapNav = (function(){
     var toggleMobileNav = function() {
         var top = $('body').offset().top - $(window).scrollTop();
-
-        if(!$('body').hasClass('navigation-open')){
-            $('body').css({top: top + 'px'});
-        }else{
-            var scroll = parseInt($('body').css('top'), 10);
-            $('body').css('position', 'static');
-            $('body').scrollTop(Math.abs(scroll)).css('position', '');
-        }
+        $('.region-primary-menu').css('top', Math.abs(top));
         $('body').toggleClass('navigation-open');
     };
 
