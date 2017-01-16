@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>
+	Error - Vodafone Provided by Virgin Media WiFi
+</title><meta id="ViewPortMetaTag" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><meta http-equiv="Cache-Control" content="no-transform" />
+    <script type="text/javascript">
+        var utmac = "UA-40707977-15", jpSvcHost = "http://wifi.virginmedia.com";
+    </script>
+    <link id="PartnerCssAll" href="CSS/vodafone.all.min.css?id=080416" rel="stylesheet" type="text/css" />
+        <script src="js/CustomMinAll.js?id=080416" type="text/javascript"></script>
+    <span id="NoJavaScriptControl1"><noscript>
+  <META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://wifi.virginmedia.com/m/Error.aspx?F=hO4/68yqd75jZcLl8ZPKtz39ZDAU9uqdLPFs5noh9eAsTxsii+cRNkIUBsOFwDL1yWj2cjAuqp1NGY0jQA5dFCq+DvORLFnzmugJ5hi0/GnWGo0l/KzUmQChEuffrK9WUweJqIrsWs5S2CM+GQZppZI2MXTWmbdpGfSKsJhB39BXOaC3vMQFYgnsjoP7Y7T9c1t/bk4kxORNNZbthRZgCps13bSiawrWXhSAZRhbb4vNfUHdG2ahgFP6MK9dRHb5&noscript=true">
+</noscript>
+</span>
+</head>
+<body id="masterBody" class="page">
+    
+    <div data-role="page" data-add-back-btn="false" class="errorPage">
+        <script type="text/javascript">var siteStatUrl="https://da.virginmedia.com/virginmedia/vmmsu/s?name=tfl.error.page&vm_vs_pl=mo&vm_vs_sn=tf&vm_vs_ss=tf&vm_vs_ct=ge&vm_loggedin=1&vm_userid=1117065&vm_tw_loggedin=0&vm_fb_loggedin=0&vm_vs_ch=vf";sitestat(siteStatUrl);</script> <noscript> <img src="https://da.virginmedia.com/virginmedia/vmmsu/s?name=tfl.error.page&vm_vs_pl=mo&vm_vs_sn=tf&vm_vs_ss=tf&vm_vs_ct=ge&vm_loggedin=1&vm_userid=1117065&vm_tw_loggedin=0&vm_fb_loggedin=0&vm_vs_ch=vf" height=1 width=1 alt="*" /> </noscript> 
+        <div data-role="header" data-theme="v" data-position="fixed">
+            <a id="backButton" href="default.aspx" data-ajax="false">Home</a>
+		    <h3 id="PageTitle">System Error</h3>
+	    </div>
+        <div id="content" data-role="content">
+        <div id="ErrorContainer"><div class="errorMessage">
+	<span>(1000) - Oops, looks like there was a problem loading this page. Please ensure you have cookies enabled on your device and try again.</span>
+</div></div>
+        </div>
+        <div class="center"><a href="/m/Default.aspx" id="registerButton" type="button" data-theme="v" data-inline="true" data-ajax="false" data-rel="external">Try again</a></div>
+        
+    </div>
+
+</body>
+</html>

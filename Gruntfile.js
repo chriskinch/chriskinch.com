@@ -142,7 +142,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Default task(s).
-    grunt.registerTask('default', ['compileicons', 'compilejs', 'compilecss']);
+    grunt.registerTask('default', ['compilejs', 'compilecss']);
     grunt.registerTask('compilejs', ['jshint', 'browserify']);
     grunt.registerTask('compilecss', ['sass']);
     grunt.registerTask('compileicons', ['fontello', 'string-replace:fonts']);

@@ -38,3 +38,15 @@ function _chriskinch_unset_sub_library($extension, $name, $set) {
 	}
 	return $assets;
 }
+
+function chriskinch_preprocess_node(&$variables) {
+	//kint($variables['content']['field_primary_image']);
+	//die();
+	if($variables['view_mode'] == 'teaser') {
+		if(!isset($variables['content']['field_teaser_image'][0])){
+			$variables['content']['field_teaser_image'] = $variables['content']['field_primary_image'];
+		}
+		hide($variables['content']['field_primary_image']);
+	}
+	
+}

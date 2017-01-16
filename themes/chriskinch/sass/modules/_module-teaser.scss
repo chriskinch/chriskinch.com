@@ -12,7 +12,8 @@
             margin-right:1em;
         }
 
-        .field--name-field-teaser-image {
+        .field--name-field-teaser-image,
+        .field--name-field-primary-image {
             order: -1;
         }
 
@@ -27,7 +28,7 @@
 @include jacket(non-critical) {
 
     .node--view-mode-teaser {
-        > .field:not(.field--name-field-teaser-image) {
+        > .field:not(.field--name-field-teaser-image):not(.field--name-field-primary-image){
             width: 100%;
         }
 
