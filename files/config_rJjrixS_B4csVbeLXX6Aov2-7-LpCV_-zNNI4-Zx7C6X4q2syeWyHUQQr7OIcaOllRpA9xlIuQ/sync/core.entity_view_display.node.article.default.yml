@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_primary_image
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_image
+    - image.style.scale_width_830
     - node.type.article
   module:
     - field_group
@@ -82,7 +83,7 @@ content:
     type: image
     weight: 1
     settings:
-      image_style: large
+      image_style: scale_width_830
       image_link: ''
     third_party_settings: {  }
     label: hidden
@@ -103,7 +104,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      image_style: ''
+      image_style: scale_width_830
       image_link: ''
     third_party_settings: {  }
     type: image

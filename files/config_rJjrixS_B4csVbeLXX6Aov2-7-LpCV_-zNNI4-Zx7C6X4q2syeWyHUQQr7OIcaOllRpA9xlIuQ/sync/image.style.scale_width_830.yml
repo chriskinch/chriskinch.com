@@ -7,14 +7,14 @@ dependencies:
       - responsive_image
 _core:
   default_config_hash: MIWUEhKenWK-3vEZNN_FJwpmqggIZtfJ9LOLYryTqHI
-name: max_650x650
-label: 'Max 650x650'
+name: scale_width_830
+label: 'Scale Width 830'
 effects:
   949c201a-77f5-48f6-ba00-be91eb1aad47:
     uuid: 949c201a-77f5-48f6-ba00-be91eb1aad47
     id: image_scale
     weight: 1
     data:
-      width: 650
-      height: 650
+      width: 830
+      height: null
       upscale: false

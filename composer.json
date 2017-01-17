@@ -46,7 +46,8 @@
         "drupal/menu_link_attributes": "1.0.0-beta3",
         "drupal/breakpoints_settings": "1.x-dev",
         "chriskinch/css_inline": "1.0",
-        "drupal/devel": "1.0.0-beta1"
+        "drupal/devel": "1.0.0-beta1",
+        "drupal/paragraphs": "^1.0"
     },
     "extra": {
         "installer-paths": {
