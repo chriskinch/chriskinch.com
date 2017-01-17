@@ -11,11 +11,13 @@ module.exports = function(grunt) {
 
         meta: {
             paths: {
+                base: 'sites/chriskinch8.com/',
                 theme: {
                     base: 'themes/chriskinch',
                     sass: '<%= meta.paths.theme.base %>/sass',
                     css: '<%= meta.paths.theme.base %>/css',
                     js: '<%= meta.paths.theme.base %>/js',
+                    fonts: '<%= meta.paths.theme.base %>/fonts',
                 }
             }
         },
@@ -130,7 +132,7 @@ module.exports = function(grunt) {
                         replacement: 'src: url'
                     }, {
                         pattern: /..\/font\//g,
-                        replacement: '../fonts/fontello/'
+                        replacement: '/<%= meta.paths.base %><%= meta.paths.theme.fonts %>/fontello/'
                     }]
                 }
             }
