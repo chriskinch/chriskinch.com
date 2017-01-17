@@ -1,0 +1,14 @@
+uuid: 7e886ae6-99b8-495a-a74b-f68174be2685
+langcode: en
+status: true
+dependencies: {  }
+name: max_crop_500
+label: 'Max Crop 500'
+effects:
+  2333fb4d-08b0-45c8-82aa-7ae96fc6b0b5:
+    uuid: 2333fb4d-08b0-45c8-82aa-7ae96fc6b0b5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500

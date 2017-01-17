@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.article.field_primary_image
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_image
-    - image.style.large
+    - image.style.max_crop_500
     - node.type.article
   module:
     - image
@@ -46,7 +46,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: large
+      image_style: max_crop_500
       image_link: content
     third_party_settings: {  }
   field_tags:
@@ -62,7 +62,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
+      image_style: max_crop_500
       image_link: content
     third_party_settings: {  }
     region: content

@@ -7,10 +7,11 @@ _core:
 name: large
 label: 'Large (480×480)'
 effects:
-  c869c143-3331-4e3b-ace7-494f0869a6be:
-    uuid: c869c143-3331-4e3b-ace7-494f0869a6be
-    id: image_scale_and_crop
+  2bbdd26c-ac40-4975-a40f-fa3e27942bdf:
+    uuid: 2bbdd26c-ac40-4975-a40f-fa3e27942bdf
+    id: image_scale
     weight: 2
     data:
       width: 480
       height: 480
+      upscale: false
