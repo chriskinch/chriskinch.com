@@ -81,7 +81,7 @@ content:
     region: content
   field_image:
     type: image
-    weight: 1
+    weight: 2
     settings:
       image_style: scale_width_830
       image_link: ''
@@ -101,7 +101,7 @@ content:
     type: link
     region: content
   field_primary_image:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       image_style: scale_width_830
