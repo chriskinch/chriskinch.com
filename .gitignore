@@ -2,17 +2,10 @@ local.settings.php
 .sass-cache
 .DS_Store
 settings.php
-composer.lock
 console/
 files/*
 !files/field
 !files/config*
-themes/chriskinch/css/
-themes/chriskinch/js/build/
 !modules/custom/
-node_modules/
-bower_components/
-vendor/
-libraries/
 backups/
 fontello-tmz.zip
