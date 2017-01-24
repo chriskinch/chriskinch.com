@@ -2,7 +2,6 @@ local.settings.php
 .sass-cache
 .DS_Store
 settings.php
-composer.lock
 console/
 files/*
 !files/field
