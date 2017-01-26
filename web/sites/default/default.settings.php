@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'fhq4tADIn_zbacf-BKwMztFwqnw_exjSemNotM7QnaSvuil8w8rk50ekjEeeW5Iy_83QjRc08g';
 
 /**
  * Deployment identifier.
@@ -416,20 +416,6 @@ $settings['update_free_access'] = FALSE;
  * getting cached pages from the proxy.
  */
 # $settings['omit_vary_cookie'] = TRUE;
-
-
-/**
- * Cache TTL for client error (4xx) responses.
- *
- * Items cached per-URL tend to result in a large number of cache items, and
- * this can be problematic on 404 pages which by their nature are unbounded. A
- * fixed TTL can be set for these items, defaulting to one hour, so that cache
- * backends which do not support LRU can purge older entries. To disable caching
- * of client error responses set the value to 0. Currently applies only to
- * page_cache module.
- */
-# $settings['cache_ttl_4xx'] = 3600;
-
 
 /**
  * Class Loader.
@@ -667,7 +653,7 @@ if ($settings['hash_salt']) {
 /**
  * Load services definition file.
  */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 /**
  * Override the default service container class.
@@ -677,15 +663,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * to test a service container that throws an exception.
  */
 # $settings['container_base_class'] = '\Drupal\Core\DependencyInjection\Container';
-
-/**
- * Override the default yaml parser class.
- *
- * Provide a fully qualified class name here if you would like to provide an
- * alternate implementation YAML parser. The class must implement the
- * \Drupal\Component\Serialization\SerializationInterface interface.
- */
-# $settings['yaml_parser_class'] = NULL;
 
 /**
  * Trusted host configuration.
@@ -725,21 +702,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  */
 
 /**
- * The default list of directories that will be ignored by Drupal's file API.
- *
- * By default ignore node_modules and bower_components folders to avoid issues
- * with common frontend tools and recursive scanning of directories looking for
- * extensions.
- *
- * @see file_scan_directory()
- * @see \Drupal\Core\Extension\ExtensionDiscovery::scanDirectory()
- */
-$settings['file_scan_ignore_directories'] = [
-  'node_modules',
-  'bower_components',
-];
-
-/**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
@@ -749,7 +711,18 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+if (file_exists(__DIR__ . '/settings.local.php')) {
+   include __DIR__ . '/settings.local.php';
+}
+$databases['default']['default'] = array (
+  'database' => 'chriskinch8_dev',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['install_profile'] = 'standard';
+$config_directories['sync'] = 'sites/chriskinch8.com/files/config_rJjrixS_B4csVbeLXX6Aov2-7-LpCV_-zNNI4-Zx7C6X4q2syeWyHUQQr7OIcaOllRpA9xlIuQ/sync';

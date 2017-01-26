@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
         meta: {
             paths: {
-                base: 'sites/chriskinch8.com/',
+                base: '/',
                 theme: {
                     base: 'themes/chriskinch',
                     sass: '<%= meta.paths.theme.base %>/sass',
@@ -38,15 +38,15 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '<%= meta.paths.theme.css %>/styles.critical.css': '<%= meta.paths.theme.sass %>/styles.critical.scss',
-                    '<%= meta.paths.theme.css %>/styles.noncritical.css': '<%= meta.paths.theme.sass %>/styles.noncritical.scss',
-                    '<%= meta.paths.theme.css %>/styles.css': '<%= meta.paths.theme.sass %>/styles.scss'
+                    'css/styles.critical.css': 'sass/styles.critical.scss',
+                    'css/styles.noncritical.css': 'sass/styles.noncritical.scss',
+                    'css/styles.css': 'sass/styles.scss'
                 }
             }
         },
 
         browserify: {
-          '<%= meta.paths.theme.js %>/build/theme.js': ['<%= meta.paths.theme.js %>/theme.js']
+          'js/build/theme.js': ['js/theme.js']
         },
 
         pagespeed: {
@@ -85,11 +85,11 @@ module.exports = function(grunt) {
                 tasks: ['jshint']
             },
             scripts: {
-                files: ['<%= meta.paths.theme.js %>/src/*.js', '<%= meta.paths.theme.js %>/theme.js'],
+                files: ['js/src/*.js', 'js/theme.js'],
                 tasks: ['compilejs']
             },
             styles: {
-                files: ['<%= meta.paths.theme.sass %>/**/*.scss'],
+                files: ['sass/**/*.scss'],
                 tasks: ['compilecss']
             }
         },
@@ -97,9 +97,9 @@ module.exports = function(grunt) {
         fontello: {
             dist: {
                 options: {
-                    config  : '<%= meta.paths.theme.base %>/fonts/fontello/config.json',
-                    fonts   : '<%= meta.paths.theme.base %>/fonts/fontello',
-                    styles  : '<%= meta.paths.theme.sass %>/config',
+                    config  : 'fonts/fontello/config.json',
+                    fonts   : 'fonts/fontello',
+                    styles  : 'sass/config',
                     scss    : true,
                     exclude: [
                         'animation.css',
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
         'string-replace': {
             fonts: {
                 files: {
-                    '<%= meta.paths.theme.sass %>/config/_fontello.scss': '<%= meta.paths.theme.sass %>/config/_fontello.scss',
+                    'sass/config/_fontello.scss': 'sass/config/_fontello.scss',
                 },
                 options: {
                     replacements: [{
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
                         replacement: 'src: url'
                     }, {
                         pattern: /..\/font\//g,
-                        replacement: '/<%= meta.paths.base %><%= meta.paths.theme.fonts %>/fontello/'
+                        replacement: '<%= meta.paths.base %><%= meta.paths.theme.fonts %>/fontello/'
                     }]
                 }
             }
