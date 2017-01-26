@@ -28,7 +28,6 @@ var portfolioMap = (function() {
 
             var service = new google.maps.places.PlacesService(map);
             service.getDetails(place_request, function(place, status){
-                console.log(this);
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     // To add the marker to the map, use the 'map' property
                     var marker = new google.maps.Marker({
