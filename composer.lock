@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "24a9fc6f1e50a83d4ab0832673b7663c",
+    "content-hash": "b4551056d59c066497b734e64ce6d57c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -303,16 +303,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "46ad263b21517a2aafe21d4651e06c553b8309a7"
+                "reference": "3074e408160e1b81bda5483f6d2342abc872ea1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/46ad263b21517a2aafe21d4651e06c553b8309a7",
-                "reference": "46ad263b21517a2aafe21d4651e06c553b8309a7",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/3074e408160e1b81bda5483f6d2342abc872ea1b",
+                "reference": "3074e408160e1b81bda5483f6d2342abc872ea1b",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +351,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2017-01-21T06:15:21+00:00"
+            "time": "2017-01-27T01:59:21+00:00"
         },
         {
             "name": "consolidation/output-formatters",
@@ -1657,17 +1657,17 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.0.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_reference_revisions",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "85d5c182208beb4358fe3943a624182f590d1e0d"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "15261a4237cc2a743522a7bd81e9f34e01d12843"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1681,8 +1681,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1469725576"
+                    "version": "8.x-1.2",
+                    "datestamp": "1485790085"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4742,6 +4742,17 @@
             "time": "2015-12-17T08:42:14+00:00"
         },
         {
+            "name": "wickynilliams/enquirejs",
+            "version": "2.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/WickyNilliams/enquire.js/archive/v2.1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
+        {
             "name": "zendframework/zend-diactoros",
             "version": "1.3.10",
             "source": {
@@ -5812,16 +5823,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -5872,7 +5883,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19T09:18:40+00:00"
+            "time": "2017-01-29T09:50:25+00:00"
         },
         {
             "name": "sebastian/diff",

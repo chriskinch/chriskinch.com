@@ -18,6 +18,18 @@
             "type": "vcs",
             "url": "git@github.com:chriskinch/css_inline.git",
             "no-api": true
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "wickynilliams/enquirejs",
+                "version": "2.1.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/WickyNilliams/enquire.js/archive/v2.1.2.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -33,7 +45,8 @@
         "drupal/breakpoints_settings": "1.x-dev",
         "drupal/devel": "1.0.0-beta1",
         "drupal/paragraphs": "^1.0",
-        "chriskinch/css_inline": "^1.1"
+        "chriskinch/css_inline": "^1.1",
+        "wickynilliams/enquirejs": "^2.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",

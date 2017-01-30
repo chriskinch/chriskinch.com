@@ -1,6 +1,6 @@
 enquirejs:
   js:
-    bower_components/enquire/dist/enquire.min.js: {}
+    ../../libraries/enquirejs/dist/enquire.min.js: {}
   dependencies:
     - core/drupalSettings
 
