@@ -1,0 +1,20 @@
+uuid: b72351b4-b182-4f83-bec9-b9ba08210de9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - chriskinch
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: chriskinch_page_title
+theme: chriskinch
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

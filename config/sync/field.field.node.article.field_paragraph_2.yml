@@ -1,0 +1,38 @@
+uuid: 48e502a3-f47d-45ad-8e4a-f54926b3a6a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_2
+    - node.type.article
+    - paragraphs.paragraphs_type.testimonials
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.article.field_paragraph_2
+field_name: field_paragraph_2
+entity_type: node
+bundle: article
+label: Paragraph_2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testimonials: testimonials
+      text: text
+    target_bundles_drag_drop:
+      offers:
+        weight: 4
+        enabled: false
+      testimonials:
+        enabled: true
+        weight: 5
+      text:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+uuid: d71a8f26-b57a-45ad-861f-6d2225d815b8
+langcode: en
+status: true
+dependencies: {  }
+id: social-networks
+label: 'Social Networks'
+description: 'Links to networks to which I contribute personally and professionally. '
+locked: false

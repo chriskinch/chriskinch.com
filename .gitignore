@@ -19,6 +19,7 @@ web/sites/simpletest
 # Ignore config and settings.
 settings.php
 settings.local.php
+settings.db.php
 
 # Ignore NPM directories.
 node_modules
