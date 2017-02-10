@@ -4,7 +4,8 @@
   "description": "[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node_modules/.bin/webdriver-manager update && node_modules/.bin/webdriver-manager start",
+    "tests": "node_modules/.bin/cucumber-mink -- -f pretty"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,8 @@
     "gherkin-parser": "^1.0.1",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
-    "grunt-cucumber": "^0.3.0",
     "load-grunt-tasks": "^3.5.2",
-    "selenium-webdriver": "^3.0.1"
+    "selenium-webdriver": "^3.0.1",
+    "webdriver-manager": "^12.0.2"
   }
 }
