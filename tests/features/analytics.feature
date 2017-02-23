@@ -5,6 +5,5 @@ Feature: Analytics
 
 @analytics @homepage
 Scenario: UA number is present on the homepage
-  Given I browse "http://local.chriskinch.com"
-  And I am on the homepage
+  Given I am on "http://local.chriskinch.com/node/3"
   Then I should see "UA-30551803-1"

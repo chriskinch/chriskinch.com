@@ -5,7 +5,6 @@ Feature: Breakpoints
 
 @breakpoints
 Scenario: Breakpoints settings inside Drupal settings as individuals
-  Given I browse "http://local.chriskinch.com"
   And I am on the homepage
   Then the "drupalSettings" object should contain the key "breakpoints_settings.chriskinch.mobile"
   And the "drupalSettings" object should contain the key "breakpoints_settings.chriskinch.mobile_only"
@@ -18,7 +17,6 @@ Scenario: Breakpoints settings inside Drupal settings as individuals
 
 @breakpoints
 Scenario: Breakpoints settings inside Drupal settings as a table
-  Given I browse "http://local.chriskinch.com"
   And I am on the homepage
   Then the "drupalSettings" object should contain the keys
     | breakpoints_settings.chriskinch.mobile       | (min-width: 0em)                                      |

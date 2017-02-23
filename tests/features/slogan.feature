@@ -5,6 +5,5 @@ Feature: Slogan
 
 @branding @homepage
 Scenario: Slogan is visible on the homepage
-  Given I browse "http://local.chriskinch.com"
-  And I am on the homepage
+  Given I browse to "node/2"
   Then I should see "Designer, developer, Drupal themer & all-round geek."

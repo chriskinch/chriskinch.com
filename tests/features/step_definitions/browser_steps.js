@@ -8,10 +8,6 @@ var baseURL = 'http://local.chriskinch.com';
 
 defineSupportCode(function({Given, When, Then}) {
 
-  Given('I am on the Cucumber.js GitHub repository', function() {
-    return this.driver.get('http://local.chriskinch.com');
-  });
-
   When('I click on {stringInDoubleQuotes}', function (text) {
     return this.driver.findElement({linkText: text}).then(function(element) {
       return element.click();
@@ -24,13 +20,17 @@ defineSupportCode(function({Given, When, Then}) {
     return this.driver.wait(condition, 5000);
   });
 
-  Given('I browse {arg1:stringInDoubleQuotes}', function (arg1) {
-    return this.driver.get(arg1);    
-  });
-
   Given('I am on the homepage', function () {
     // Write code here that turns the phrase above into concrete actions
     return this.driver.get(baseURL);
+  });
+
+  Given('I browse to {arg1:stringInDoubleQuotes}', function (arg1) {
+    return this.driver.get(baseURL + "/" + arg1);
+  });
+
+  Given('I am on {arg1:stringInDoubleQuotes}', function (arg1) {
+    return this.driver.get(arg1);
   });
 
   Then('the {arg1:stringInDoubleQuotes} object should contain the key {arg2:stringInDoubleQuotes}', function (object, match) {
