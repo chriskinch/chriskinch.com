@@ -33,19 +33,17 @@ defineSupportCode(function({Given, When, Then}) {
     return this.driver.get(baseURL);
   });
 
-  Then('the {arg1:stringInDoubleQuotes} object should contain {arg2:stringInDoubleQuotes}', function (objString, match) {
-    // Split the object string and pass first to be executed
-    var objArray = objString.split(".");
-    var parent = objArray.shift();
-    var lookup = objArray.join(".");
+  Then('the {arg1:stringInDoubleQuotes} object should contain the key {arg2:stringInDoubleQuotes}', function (object, match) {
+    this.driver.executeScript('return window[arguments[0]];', object).then(function(result) {
+      assert.deepProperty(result, match, 'Key not found in "' + object + '"');
+    });
+  });
 
-
-    console.log(parent);
-    console.log(lookup);
-
-    this.driver.executeScript('return window[arguments[0]];', parent).then(function(result) {
-      var object = helpers.objRef(result, lookup);
-      assert.property(object, match, 'Key not found in "' + objString + '"');
+  Then('the {arg1:stringInDoubleQuotes} object should contain the keys', function (object, table) {
+    this.driver.executeScript('return window[arguments[0]];', object).then(function(result) {
+      for(var i=0; i < table.raw().length; i++) {
+        assert.deepPropertyVal(result, table.raw()[i][0], table.raw()[i][1], 'Key not found in "' + object + '"');
+      }
     });
   });
 

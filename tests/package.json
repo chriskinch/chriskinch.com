@@ -7,7 +7,7 @@
     "update": "node_modules/.bin/webdriver-manager update",
     "serve": "node_modules/.bin/webdriver-manager start",
     "tests": "./node_modules/.bin/cucumber-mink",
-    "test": "node_modules/.bin/cucumber-js features/breakpoints.feature"
+    "test": "node_modules/.bin/cucumber-js"
   },
   "repository": {
     "type": "git",

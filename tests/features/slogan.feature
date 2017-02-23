@@ -7,4 +7,4 @@ Feature: Slogan
 Scenario: Slogan is visible on the homepage
   Given I browse "http://local.chriskinch.com"
   And I am on the homepage
-  Then I should see "Hello. I'm Chris Kinch."
+  Then I should see "Designer, developer, Drupal themer & all-round geek."
