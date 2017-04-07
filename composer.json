@@ -46,7 +46,8 @@
         "drupal/devel": "1.0.0-beta1",
         "drupal/paragraphs": "^1.0",
         "chriskinch/css_inline": "^1.1",
-        "wickynilliams/enquirejs": "^2.1"
+        "wickynilliams/enquirejs": "^2.1",
+        "drupal/google_analytics": "^2.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
