@@ -6,7 +6,7 @@
   "scripts": {
     "update": "node_modules/.bin/webdriver-manager update",
     "serve": "node_modules/.bin/webdriver-manager start",
-    "tests": "./node_modules/.bin/cucumber-mink",
+    "mink": "./node_modules/.bin/cucumber-mink",
     "test": "node_modules/.bin/cucumber-js"
   },
   "repository": {

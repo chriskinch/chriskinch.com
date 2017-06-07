@@ -2,9 +2,9 @@
 var seleniumWebdriver = require('selenium-webdriver');
 var assert = require("chai").assert;
 var {defineSupportCode} = require('cucumber');
-var helpers = require('../support/helpers');
+var helpers4 = require('../support/helpers');
 
-var baseURL = 'http://local.chriskinch.com';
+var baseURL = 'http://chriskinch.com.drupal-8.x.dev';
 
 defineSupportCode(function({Given, When, Then}) {
 
@@ -25,21 +25,21 @@ defineSupportCode(function({Given, When, Then}) {
     return this.driver.get(baseURL);
   });
 
-  Given('I browse to {arg1:stringInDoubleQuotes}', function (arg1) {
+  Given('I browse to {stringInDoubleQuotes}', function (arg1) {
     return this.driver.get(baseURL + "/" + arg1);
   });
 
-  Given('I am on {arg1:stringInDoubleQuotes}', function (arg1) {
+  Given('I am on {stringInDoubleQuotes}', function (arg1) {
     return this.driver.get(arg1);
   });
 
-  Then('the {arg1:stringInDoubleQuotes} object should contain the key {arg2:stringInDoubleQuotes}', function (object, match) {
+  Then('the {stringInDoubleQuotes} object should contain the key {stringInDoubleQuotes}', function (object, match) {
     this.driver.executeScript('return window[arguments[0]];', object).then(function(result) {
       assert.deepProperty(result, match, 'Key not found in "' + object + '"');
     });
   });
 
-  Then('the {arg1:stringInDoubleQuotes} object should contain the keys', function (object, table) {
+  Then('the {stringInDoubleQuotes} object should contain the keys', function (object, table) {
     this.driver.executeScript('return window[arguments[0]];', object).then(function(result) {
       for(var i=0; i < table.raw().length; i++) {
         assert.deepPropertyVal(result, table.raw()[i][0], table.raw()[i][1], 'Key not found in "' + object + '"');

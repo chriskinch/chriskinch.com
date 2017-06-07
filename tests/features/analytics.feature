@@ -3,7 +3,7 @@ Feature: Analytics
   As an Owner
   I want to see Google Analytic code on the page
 
-@analytics @homepage
+@analytics @homepage @mink
 Scenario: UA number is present on the homepage
-  Given I am on "http://local.chriskinch.com/node/3"
+  Given I am on "http://chriskinch.com.drupal-8.x.dev/node/3"
   Then I should see "UA-30551803-1"

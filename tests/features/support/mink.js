@@ -4,7 +4,7 @@ var Mink = require('cucumber-mink');
 var parameters = {
   driver: {
     desiredCapabilities: {
-      browserName: 'chrome'
+      browserName: 'phantomjs'
     },
     logLevel: 'silent', 
   }
