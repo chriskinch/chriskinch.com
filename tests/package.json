@@ -4,10 +4,7 @@
   "description": "[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)",
   "main": "index.js",
   "scripts": {
-    "update": "node_modules/.bin/webdriver-manager update",
-    "serve": "node_modules/.bin/webdriver-manager start",
-    "mink": "./node_modules/.bin/cucumber-mink",
-    "test": "node_modules/.bin/cucumber-js"
+    "test": "npm i && node_modules/.bin/cucumber-js --require node_modules/chriskinch-cucumberjs"
   },
   "repository": {
     "type": "git",
@@ -20,11 +17,12 @@
   },
   "homepage": "https://github.com/chriskinch/chriskinch.com#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chriskinch-cucumberjs": "~1.0.0",
     "chromedriver": "^2.27.3",
     "cucumber": "^2.0.0-rc.7",
-    "cucumber-mink": "^1.5.0",
-    "selenium-webdriver": "^3.1.0",
-    "webdriver-manager": "^12.0.2"
+    "selenium-webdriver": "^3.1.0"
+  },
+  "options": {
+    "baseUrl": "http://chriskinch.com.drupal-8.x.dev"
   }
 }
