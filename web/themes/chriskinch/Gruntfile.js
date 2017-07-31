@@ -34,7 +34,10 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 sourceMap: true,
-                importer: compass
+                importer: compass,
+                includePaths: [
+                  'node_modules/sass-mq'
+                ]
             },
             dist: {
                 files: {

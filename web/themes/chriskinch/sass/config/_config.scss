@@ -151,5 +151,5 @@ $transition_time: 0.3s;
 @import "compass/utilities/sprites";               // See http: //compass-style.org/help/tutorials/spriting
 @import "compass/css3";                            // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/typography/vertical_rhythm";      // Helps set up a vertical rhythm.
-@import "../../node_modules/sass-mq/mq";     // Media Query mixin library. See http://github.com/sass-mq/sass-mq
+@import "mq";                                      // Media Query mixin library. See http://github.com/sass-mq/sass-mq
 @import "../misc/jacket";                          // Conditional Styles with Sass. See http://github.com/at-import/jacket
