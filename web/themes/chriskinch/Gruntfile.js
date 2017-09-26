@@ -70,13 +70,13 @@ module.exports = function(grunt) {
             },
             live_desktop: {
                 options: {
-                    url: 'http://chriskinch.com',
+                    url: 'http://stage.chriskinch.com',
                     strategy: 'desktop'
                 }
             },
             live_mobile: {
                 options: {
-                    url: 'http://chriskinch.com',
+                    url: 'http://stage.chriskinch.com',
                     strategy: 'mobile'
                 }
             }
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
     grunt.registerTask('speed', 'Run pagespeed with ngrok', function() {
         var done = this.async();
         var opt = {
-            host_header: 'local.chriskinch8.com'
+            host_header: 'chriskinch.com.drupal-8.x.dev'
         };
         ngrok.connect(opt, function(err, url) {
             if (err !== null) {
