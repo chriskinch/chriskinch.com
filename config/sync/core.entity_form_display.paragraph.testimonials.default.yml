@@ -1,0 +1,27 @@
+uuid: 43c26b44-2b2d-46e5-a471-dcae8fc26ee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials.field_text
+    - paragraphs.paragraphs_type.testimonials
+  module:
+    - text
+id: paragraph.testimonials.default
+targetEntityType: paragraph
+bundle: testimonials
+mode: default
+content:
+  field_text:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

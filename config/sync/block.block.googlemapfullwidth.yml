@@ -1,0 +1,25 @@
+uuid: 3dec0c4f-edbd-470c-8e3d-26404a0cfd70
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8c1e0e1f-2eb8-417c-86c0-0d8f5e02f65b'
+  module:
+    - block_content
+  theme:
+    - chriskinch
+id: googlemapfullwidth
+theme: chriskinch
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:8c1e0e1f-2eb8-417c-86c0-0d8f5e02f65b'
+settings:
+  id: 'block_content:8c1e0e1f-2eb8-417c-86c0-0d8f5e02f65b'
+  label: 'Google Map - Full Width'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
