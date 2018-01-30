@@ -1,0 +1,22 @@
+@import "../config/config";
+
+/* =============================================================================
+   HTML & Body
+   ========================================================================== */
+
+@include jacket(critical) {
+
+  body {
+    width:100%;
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    font-weight: 300;
+    background-color: $body;
+
+    @include mq($from: regular) {
+      background-color: $page;
+      background-image: url("/themes/chriskinch/images/squairy_light.png");
+    }
+  }
+}

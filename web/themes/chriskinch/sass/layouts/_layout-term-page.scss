@@ -1,0 +1,29 @@
+@include jacket(critical) {
+
+    .view-frontpage {
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .views-row {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include mq($from: narrow, $until: regular) {
+            .views-row {
+                width: calc(100% / 2);
+            }
+        }
+
+        @include mq($from: regular) {
+            .views-row {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+// END CRITICAL
+}

@@ -1,0 +1,46 @@
+@include jacket(critical) {
+
+  /*
+   * Center the page.
+   */
+
+  #page,
+  #footer,
+  .region-bottom {
+    @include grid-full-container;
+  }
+
+  /*
+   * Apply the shared properties of grid items in a single, efficient ruleset.
+   */
+  // See the note about $zen-auto-include-item-base above.
+
+  #header,
+  #navigation,
+  #content,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  .region-navigation,
+  #footer,
+  .group-meta,
+  .group-images {
+    // @include zen-grid-item-base();
+  }
+
+  /*
+   * Containers for grid items and flow items.
+   */
+
+  #header,
+  #main,
+  #footer {
+    // @include zen-grid-container();
+  }
+
+// END CRITICAL
+}
+
+
+@include jacket(non-critical) {
+
+}

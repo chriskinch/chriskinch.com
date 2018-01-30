@@ -1,0 +1,18 @@
+@include jacket(critical) {
+
+    .node--view-mode-teaser .field--name-field-primary-image {
+    	line-height: 0;
+    	margin: -1.5em -1.5em 0 -1.5em;
+	}
+
+// END CRITICAL
+}
+
+@include jacket(non-critical) {
+    @include mq($from: regular) {
+        .node--view-mode-full .field--name-field-primary-image {
+            float: right;
+            width: 70%;
+        }
+    }
+}

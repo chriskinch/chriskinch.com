@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+// Tinkering with the libraries.
+function chriskinch_css_alter(&$css, $assets) {
+	// List of modules we want to nuke when not logged in.
+	$sub_assets = [
+  		'core' => ['normalize'],
+  		'system' => ['base'],
+  		'views' => ['views.module'],
+  		'classy' => ['base', 'node', 'messages']
+  	];
+  	//If Anonymous loop through nested array.
+  	if(\Drupal::currentUser()->isAnonymous()) {
+		foreach($sub_assets as $key => $value) {
+			foreach($value as $name) {
+				//Helper function to fetch the list of CSS assets asscociated with a libray.
+				$group = _chriskinch_unset_sub_library($key, $name, 'css');
+				foreach($group as $path) {
+					//Kill it with fire!
+					unset($css[$path]);
+				}
+			}
+		}
+	}
+}
+
+function _chriskinch_unset_sub_library($extension, $name, $set) {
+	$library = \Drupal::service('library.discovery')->getLibraryByName($extension, $name);
+	$sub_library = $library[$set];
+	foreach($sub_library as $asset) {
+		$assets[] = $asset['data'];
+	}
+	return $assets;
+}

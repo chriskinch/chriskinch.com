@@ -1,0 +1,28 @@
+/* =============================================================================
+   Non critical stylesheet
+   ========================================================================== */
+
+$jacket: non-critical;
+
+// Config variables and mixins
+@import "config/config";
+
+// General components
+@import "modules/module-teaser";
+@import "modules/module-footer";
+
+// Block components
+@import "modules/blocks/block";
+@import "modules/blocks/block-googlemap";
+@import "modules/blocks/block-contact";
+
+// Field components
+@import "modules/fields/field-term";
+@import "modules/fields/field-group-meta";
+@import "modules/fields/field-category";
+@import "modules/fields/field-link";
+@import "modules/fields/field-primary-image";
+@import "modules/fields/field-image";
+
+// Misc elements
+@import "misc/print";

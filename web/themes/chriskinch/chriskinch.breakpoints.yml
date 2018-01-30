@@ -1,0 +1,41 @@
+chriskinch.mobile_only:
+    label: mobile_only
+    mediaQuery: 'screen and (max-width: 519px)'
+    weight: 0
+    multipliers:
+        - 1x
+
+chriskinch.narrow:
+    label: narrow
+    mediaQuery: 'screen and (min-width: 620px)'
+    weight: 1
+    multipliers:
+        - 1x
+
+chriskinch.narrow_only:
+    label: narrow_only
+    mediaQuery: 'screen and (min-width: 620px) and (max-width: 959px)'
+    weight: 2
+    multipliers:
+        - 1x
+
+chriskinch.regular:
+    label: regular
+    mediaQuery: 'screen and (min-width: 960px)'
+    weight: 3
+    multipliers:
+        - 1x
+
+chriskinch.regular_only:
+    label: regular_only
+    mediaQuery: 'screen and (min-width: 960px) and (max-width: 1199px)'
+    weight: 4
+    multipliers:
+        - 1x
+
+chriskinch.wide:
+    label: wide
+    mediaQuery: 'screen and (min-width: 1200px)'
+    weight: 5
+    multipliers:
+        - 1x

@@ -1,0 +1,38 @@
+%tags {
+	text-transform: uppercase;
+	background:$light;
+	font-size: 0.75em;
+	line-height:1em;
+	margin-right:0.5em;
+	margin-bottom:0.5em;
+
+	a {
+		&:link, &:visited {
+			color: $text;
+			padding: 1em 1em 0.95em;
+			display: block;
+		}
+		&:hover {
+			background:$primary_color;
+		}
+
+		&.active {
+			color: $text;
+		}
+	}
+}
+
+@include jacket(non-critical) {
+
+    .field--name-field-tags,
+    .field--name-field-category {
+    	display: flex;
+    	flex-wrap: wrap;
+    	align-items: flex-start;
+
+        .field__item {
+            @extend %tags;
+        }
+    }
+
+}

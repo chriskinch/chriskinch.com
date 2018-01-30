@@ -1,0 +1,52 @@
+/**
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+
+.view-mode-full .group-meta {
+    @include clearfix;
+    margin-bottom:2em;
+
+    @include mq($from: regular) {
+        // @include zen-grid-item(6, 1);
+    }
+}
+
+.view-mode-full .group-images {
+    padding-left:0;
+    padding-right:0;
+
+    @include mq($from: regular) {
+        // @include zen-grid-item(17, 1, right);
+    }
+}
+
+.node-teaser { /* A node displayed as teaser */
+    background:$page;
+    margin-bottom:2em;
+    padding-bottom: 1em;
+
+    .node-title {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        @include leader(0.5);
+        @include trailer(0.5);
+
+        a {
+            color:$text;
+        }
+    }
+
+    p {
+        @include leader(0.5);
+    }
+}
+
+.node-unpublished { /* Unpublished nodes */
+    p.unpublished { /* The word "Unpublished" displayed underneath the content. */
+    @include unpublished-div;
+}
+}
