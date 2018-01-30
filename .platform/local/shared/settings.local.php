@@ -14,4 +14,4 @@ $databases['default']['default'] = array(
   'prefix' => '',
 );
 
-$settings['hash_salt'] = [PLATFORM_PROJECT_ENTROPY];
+$settings['hash_salt'] = "something";
