@@ -17,6 +17,7 @@ web/sites/simpletest
 /.idea/
 
 # Ignore config and settings.
+config/
 settings.php
 settings.local.php
 settings.db.php
