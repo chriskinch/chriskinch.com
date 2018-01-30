@@ -20,6 +20,7 @@ web/sites/simpletest
 settings.php
 settings.local.php
 settings.db.php
+development.services.yml
 
 # Ignore NPM directories.
 node_modules
