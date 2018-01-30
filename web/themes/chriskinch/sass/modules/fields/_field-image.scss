@@ -1,0 +1,8 @@
+@include jacket(non-critical) {
+    @include mq($from: regular) {
+        .field--name-field-image {
+            float: right;
+            width: 70%;
+        }
+    }
+}

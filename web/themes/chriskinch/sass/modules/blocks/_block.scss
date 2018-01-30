@@ -1,0 +1,13 @@
+.block { /* Block wrapper */
+	margin-bottom: 1.5em;
+}
+
+.block-title {
+	@include adjust-font-size-to($h2-font-size);
+}
+
+.region-footer {
+    .block-title  {
+    	color: $white;
+    }
+}

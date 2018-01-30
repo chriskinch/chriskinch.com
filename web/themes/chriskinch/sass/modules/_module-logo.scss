@@ -1,0 +1,23 @@
+$logo_padding: 50px;
+
+.site-name {
+	display: none;
+}
+
+.site-logo {
+	z-index: 10;
+    position: relative;
+    text-align: center;
+    top: $logo_padding;
+    overflow: hidden;
+    margin-bottom: 1em;
+
+	img {
+		background-color: $dark;
+	    padding: $logo_padding;
+	    border-radius: 100em;
+	    box-shadow: 0 1px 0 rgba(255,255,255, 0.6);
+	    position: relative;
+	    top: -$logo_padding;
+	}
+}

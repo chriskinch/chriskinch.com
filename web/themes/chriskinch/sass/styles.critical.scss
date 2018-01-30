@@ -1,0 +1,40 @@
+/* =============================================================================
+   Critical stylesheet
+   ========================================================================== */
+
+$jacket: critical;
+
+// Config variables and mixins
+@import "config/config";
+@import "config/fonts";
+@import "config/fontello";
+
+// Base components and normalize
+@import "base/normalize";
+@import "base/page";
+@import "base/forms";
+@import "base/links";
+@import "base/lists";
+@import "base/tables";
+@import "base/typography";
+
+//Misc & Helper
+@import "misc/hidden";
+
+// Layouts
+@import "layouts/layout-page";
+@import "layouts/layout-term-page";
+@import "layouts/layout-node";
+
+// General components
+@import "modules/module-header";
+@import "modules/module-logo";
+@import "modules/module-navigation";
+@import "modules/module-teaser";
+
+// Block components
+@import "modules/blocks/block-page-title";
+
+// Field components
+@import "modules/fields/field-primary-image";
+@import "modules/fields/field-teaser-image";

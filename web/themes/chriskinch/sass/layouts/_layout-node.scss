@@ -1,0 +1,20 @@
+@include jacket(critical) {
+
+    @include mq($from: regular) {
+        .node--view-mode-full {
+            @include clearfix;
+
+            .group-meta {
+                width: 25%;
+                float: left;
+            }
+
+            > *:not(.group-meta) {
+                width: 68.75%;
+                float: right;
+            }
+        }
+    }
+
+// END CRITICAL
+}

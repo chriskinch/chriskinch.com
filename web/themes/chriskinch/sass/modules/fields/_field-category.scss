@@ -1,0 +1,17 @@
+@include jacket(non-critical) {
+
+    .node--view-mode-teaser {
+        .field--name-field-category {
+            position: absolute;
+            top: 1em;
+            left: 0;
+            flex-direction: column;
+
+            .field__item {
+                background-color: white;
+                border-left: 3px solid $primary_color;
+            }
+        }
+    }
+// END CRITICAL
+}

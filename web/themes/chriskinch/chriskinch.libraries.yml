@@ -1,0 +1,19 @@
+enquirejs:
+  js:
+    ../../libraries/enquirejs/dist/enquire.min.js: {}
+  dependencies:
+    - core/drupalSettings
+
+global-styling:
+    css:
+        theme:
+            css/styles.critical.css: { inline: true }
+            css/styles.noncritical.css: {}
+
+global-scripts:
+    js:
+        js/build/theme.js: {}
+    dependencies:
+        - core/jquery
+        - core/drupal
+        - chriskinch/enquirejs

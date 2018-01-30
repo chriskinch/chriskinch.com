@@ -1,0 +1,14 @@
+uuid: e1682b36-facc-4be5-8257-d122d236aea6
+name: chriskinch.com
+mail: kinchie@gmail.com
+slogan: 'Hello. I''m Chris Kinch. Designer, developer, Drupal themer & all-round geek.'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

@@ -1,0 +1,40 @@
+@include jacket(critical) {
+    .node--view-mode-teaser {
+        background-color: $white;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        margin: 1em;
+        padding: 1.5em;
+        
+        @include mq($from: narrow) {
+            margin-left:1em;
+            margin-right:1em;
+        }
+
+        .field--name-field-teaser-image,
+        .field--name-field-primary-image {
+            order: -1;
+        }
+
+        .node--title a {
+            color: $text;
+        }
+    }
+
+// END CRITICAL
+}
+
+@include jacket(non-critical) {
+
+    .node--view-mode-teaser {
+        > .field:not(.field--name-field-teaser-image):not(.field--name-field-primary-image){
+            width: 100%;
+        }
+
+        .field--name-body p {
+            margin-top: 0;
+        }
+    }
+
+}

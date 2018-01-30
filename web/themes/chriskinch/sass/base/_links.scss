@@ -1,0 +1,47 @@
+@import "../config/config";
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+
+a:link {
+	color: $links;
+	text-decoration:none;
+  @include transition(background-color $transition_time, color $transition_time);
+}
+
+a:visited {
+  color: desaturate($links, 20%);
+}
+
+a:hover,
+a:focus {
+  color: saturate($links, 20%);
+}
+
+a:active {
+  color: lighten($links, 20%);
+}
+
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:hover,
+a:active {
+  outline: 0;
+}

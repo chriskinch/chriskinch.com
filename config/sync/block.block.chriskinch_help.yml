@@ -1,0 +1,22 @@
+uuid: 83e9ebcc-cad3-416f-89d8-305f209d09e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - chriskinch
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: chriskinch_help
+theme: chriskinch
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

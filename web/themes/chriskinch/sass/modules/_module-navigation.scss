@@ -1,0 +1,240 @@
+@include jacket(critical) {
+
+  /*
+   * The active item in a Drupal menu
+   */
+
+  // Have to use tag selectors to overrite Classy 
+  ul.menu a.is-active {
+    color: $page;
+  }
+
+  /*
+   * The skip-link link will be for the mobile popout nav in mobile.
+   */
+
+  .skip-link {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    height:50px;
+    width:100%;
+    margin: 0;
+    background-color:$dark;
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      font-family: $base-font-family;
+      display: inline-block;
+      text-align: center;
+      content: 'content';
+      color: $light;
+      border: 2px solid $light;
+      border-radius: 0.3em;
+      padding: 0px 1em 2px;
+      line-height: 30px;
+    }
+
+    &:hover:before {
+      color: $white;
+      border-color: $white;
+    }
+
+    @include mq($from: regular) {
+      @include element-invisible;
+    }
+  }
+
+  /*
+   * Navigation bar
+   */
+
+  .region-primary-menu {
+    position: fixed;
+    width: 250px;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    border-top: 50px solid darken($dark, 5%);
+    background: $dark;
+    @include mq($until: narrow) {
+      z-index: 9999;
+    }
+
+
+    .menu {
+      margin-left: 0;
+    }
+
+    .menu-item {
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    a {
+      color:$medium_dark;
+      font-size: 0.875em;
+      text-transform: uppercase;
+      padding:1em;
+      display: block;
+
+      &:hover {
+        color:$page;
+      }
+    }
+
+    .block {
+      margin-bottom: 0;
+    }
+
+    .block-title {
+      font-size: 0.6em;
+      color: $text;
+      text-transform: uppercase;
+      background-color: rgba(0,0,0,0.5);
+      margin: 0;
+      line-height: 1;
+      padding: 1em;
+      font-weight: bold;
+      border-bottom: 1px solid $primary_dark;
+    }
+
+    // Regular and up
+    @include mq($from: regular) {
+      height: 100px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border: 0;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: calc((100vw - #{$max-site-width}) / 2);
+      padding-right: calc((100vw - #{$max-site-width}) / 2);
+
+      .menu-item {
+          float: left;
+          padding-top: 0;
+          border-bottom: none;
+      }
+    }
+    // --- //
+  }
+
+  .navigation-open {
+    overflow: hidden;
+
+    .layout-container {
+      transform: translateX(250px);
+
+      &:before {
+        content: '';
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+      }
+    }
+
+    
+
+    #navigation {
+      overflow: auto;
+      z-index:50;
+    }
+
+    #skip-link a {
+      background-color:darken($dark, 5%);
+    }
+
+    @include mq($from: regular) {
+      overflow: auto;
+      position: static;
+
+      > * {
+        -webkit-transform: inherit;
+        transform: inherit;
+
+      }
+
+      &:before {
+        @include element-invisible;
+      }
+
+      #navigation {
+        overflow: visible;
+        z-index:inherit;
+      }
+    }
+  }
+
+  /*
+   * Menu blocks
+   */
+
+  .block-menu {
+    .block-title {
+      @include mq($from: regular){
+        @include element-invisible();
+      }
+    }
+  }
+
+  /*
+   * Social menu block
+   */
+
+  .menu--social-networks {
+    @include mq($from: regular) {
+      .menu-item {
+        padding-right: 0.75em;
+      }
+
+      a {
+        @include icon-only;
+        padding: 0;
+        font-size:1.5em;
+      }
+    }
+  }
+
+  .menu-linkedin:before { @include icon-linkedin-squared; }
+  .menu-github:before   { @include icon-github-circled;   }
+  .menu-facebook:before { @include icon-facebook-squared; }
+  .menu-google:before   { @include icon-gplus-squared;    }
+  .menu-twitter:before  { @include icon-twitter-squared;  }
+  .menu-lastfm:before   { @include icon-lastfm-rect;      }
+  .menu-download:before { @include icon-download;         }
+
+// END CRITICAL
+}
+
+
+@include jacket(non-critical) {
+
+  // Fallback for mobile, ls and narrow when JS is not available
+  @include mq($until: regular) {
+    html:not(.js) {
+      #navigation {
+        position: inherit;
+        padding: 0;
+        background: darken($dark, 10%);
+        margin-bottom: 6em;
+        @include box-shadow(0 6em 0 darken($dark, 10%));
+        width: 100%;
+      }
+
+      .region-navigation {
+        padding: 0;
+      }
+    }
+  }
+
+}

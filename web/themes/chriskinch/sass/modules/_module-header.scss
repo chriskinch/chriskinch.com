@@ -1,0 +1,22 @@
+.region-header {
+    text-align:center;
+    width:100%;
+    background-color: $primary_light;
+    padding: 0 $grid-gutter $grid-gutter $grid-gutter;
+
+    @include mq($from: regular) {
+        @include full-viewport-width;
+    }
+}
+
+.site-name { /* The name of the website */
+    display:none; //TEMP
+}
+
+.site-slogan { /* The slogan (or tagline) of a website */
+    @include adjust-font-size-to($h2-font-size);
+    margin-top: 1em;
+    span {
+        font-weight: bold;
+    }
+}

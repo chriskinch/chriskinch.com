@@ -1,0 +1,22 @@
+uuid: 82df4d13-f55a-47d9-8bb1-5bf9e864239d
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - chriskinch
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: chriskinch_search
+theme: chriskinch
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }
