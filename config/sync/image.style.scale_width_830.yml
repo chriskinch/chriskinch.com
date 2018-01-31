@@ -1,0 +1,12 @@
+uuid: c61724d5-d372-41cc-9dbc-c50421110404
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - responsive_image
+_core:
+  default_config_hash: MIWUEhKenWK-3vEZNN_FJwpmqggIZtfJ9LOLYryTqHI
+name: scale_width_830
+label: 'Scale Width 830'
+effects: {  }

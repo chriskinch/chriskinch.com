@@ -1,0 +1,24 @@
+uuid: 818c38cc-045b-4d8c-9618-8c014b21f06c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-networks
+  module:
+    - system
+  theme:
+    - chriskinch
+id: socialnetworks
+theme: chriskinch
+region: primary_menu
+weight: -4
+provider: null
+plugin: 'system_menu_block:social-networks'
+settings:
+  id: 'system_menu_block:social-networks'
+  label: 'Social Networks'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

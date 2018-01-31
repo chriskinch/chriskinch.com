@@ -1,0 +1,21 @@
+uuid: 1f1cc173-cde7-43bd-a8ab-988ff7ba1ccf
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_block
+  theme:
+    - chriskinch
+id: contactblock
+theme: chriskinch
+region: footer
+weight: 0
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact Me'
+  provider: contact_block
+  label_display: visible
+  contact_form: feedback
+visibility: {  }
