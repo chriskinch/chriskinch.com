@@ -1,0 +1,11 @@
+#!/bin/sh
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+echo
+
+if [ "$BRANCH" == "stage" ]; then
+	#Platform.sh: Sync master to stage before build.
+	platform environment:synchronize -y;
+	exit 0
+fi

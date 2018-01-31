@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+echo
+
+if [[ "$BRANCH" == "master" || "$BRANCH" == "stage" ]]; then
+	#Protection from commits to master and stage
+	echo "You are on branch $BRANCH. Are you sure you want to commit to this branch?"
+	echo "If so, commit with -n to bypass this pre-commmit hook."
+	exit 1
+fi
