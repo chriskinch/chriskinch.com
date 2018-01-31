@@ -10,3 +10,4 @@ _core:
 name: scale_width_830
 label: 'Scale Width 830'
 effects: {  }
+pipeline: __default__
