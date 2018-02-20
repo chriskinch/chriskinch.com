@@ -52,7 +52,8 @@
         "drupal/colorbox": "^1.4",
         "drupal/imagemagick": "^2.2",
         "drupal/imageapi_optimize": "^2.0@alpha",
-        "drupal/graphql": "^3.0@beta"
+        "drupal/graphql": "^3.0@beta",
+        "drupal/bootstrap": "^3.9"
     },
     "require-dev": {
         "behat/mink": "~1.7",
