@@ -1,4 +1,4 @@
-uuid: c53ce0ee-2c8a-4dc8-aba8-a421f897d914
+uuid: 9b79a54f-3498-4ade-838a-5fa042de9c59
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - chriskinch
+    - bootstrap
 _core:
-  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
-id: chriskinch_tools
-theme: chriskinch
-region: sidebar_first
+  default_config_hash: f3Dd5TnUiFDjFZp9yEGJInwt6cUzs7O6SvLTFTATSlU
+id: bootstrap_tools
+theme: bootstrap
+region: sidebar_second
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

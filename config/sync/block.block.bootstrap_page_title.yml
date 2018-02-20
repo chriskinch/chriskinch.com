@@ -1,15 +1,15 @@
-uuid: b72351b4-b182-4f83-bec9-b9ba08210de9
+uuid: 49cb0515-7808-4cfa-bec4-8cb6409be115
 langcode: en
 status: true
 dependencies:
   theme:
-    - chriskinch
+    - bootstrap
 _core:
-  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: chriskinch_page_title
-theme: chriskinch
-region: content
-weight: -6
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: bootstrap_page_title
+theme: bootstrap
+region: header
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

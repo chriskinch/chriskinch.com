@@ -1,17 +1,17 @@
-uuid: 8761806b-30c5-4163-9f6f-4d8d01419cf8
+uuid: f8af5700-3464-4cdb-aa29-35018e6a7b3a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - chriskinch
+    - bootstrap
 _core:
-  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: chriskinch_branding
-theme: chriskinch
-region: header
-weight: -6
+  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+id: bootstrap_branding
+theme: bootstrap
+region: navigation
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:
@@ -21,5 +21,5 @@ settings:
   label_display: '0'
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

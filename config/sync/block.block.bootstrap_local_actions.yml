@@ -1,15 +1,15 @@
-uuid: 8024fab3-b259-405d-828c-4e757dc1ba21
+uuid: dd73dc89-b0c9-48ba-a67b-e251634a0669
 langcode: en
 status: true
 dependencies:
   theme:
-    - chriskinch
+    - bootstrap
 _core:
-  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
-id: chriskinch_local_actions
-theme: chriskinch
-region: content
-weight: -6
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: bootstrap_local_actions
+theme: bootstrap
+region: header
+weight: 20
 provider: null
 plugin: local_actions_block
 settings:
