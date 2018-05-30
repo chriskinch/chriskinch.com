@@ -1,4 +1,4 @@
-# Drupal project template for Platform.sh
+# Drupal project template for Platform.sh TEST2
 
 This project provides a starter kit for Drupal 8 projects hosted on [Platform.sh](http://platform.sh). It
 is very closely based on the [Drupal Composer project](https://github.com/drupal-composer/drupal-project).
