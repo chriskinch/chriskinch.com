@@ -11,18 +11,3 @@ processors:
     weight: '-8'
     data:
       quality: '90'
-  a352cdaf-7f27-4fd9-af81-3a4a46bd49e9:
-    uuid: a352cdaf-7f27-4fd9-af81-3a4a46bd49e9
-    id: jpegtran
-    weight: '-10'
-    data:
-      manual_executable_path: /usr/local/bin/jpegtran
-      progressive: 1
-  399f2583-d312-4359-84de-a8876315f822:
-    uuid: 399f2583-d312-4359-84de-a8876315f822
-    id: optipng
-    weight: '-9'
-    data:
-      manual_executable_path: /usr/local/bin/optipng
-      level: '7'
-      interlace: '1'
