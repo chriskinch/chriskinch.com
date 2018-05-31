@@ -1,10 +1,11 @@
 #!/bin/sh
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
+REMOTE=$1
 
 echo
 
-if [ "$BRANCH" == "stage" ]; then
+if [ "$BRANCH" == "stage" ] && [ "$REMOTE" == "platform" ]; then
 	#Platform.sh: Sync master to stage before build.
 	platform sync data -y
 	exit 0
